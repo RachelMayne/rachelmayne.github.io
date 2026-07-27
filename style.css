@@ -229,11 +229,11 @@ color:#1f4e79;
 }
 
 .featured-card::after{
-content:"View Investigation â†’";
-display:block;
-margin-top:18px;
-font-weight:bold;
-color:#1f4e79;
+    content:"View Investigation \\2192";
+    display:block;
+    margin-top:18px;
+    font-weight:bold;
+    color:#1f4e79;
 }
 
 .case-study-links{
