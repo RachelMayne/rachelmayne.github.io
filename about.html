@@ -237,19 +237,38 @@ If you'd like to see how I approach technical investigations in practice, my por
 
 <footer>
 
-<p>
+<p class="footer-update">
+Last updated: <span id="last-updated"></span>
+</p>
 
-© 2026 Rachel Mayne |
-
+<p class="footer-links">
+&copy; 2026 Rachel Mayne |
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-
 <a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
-
 <a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
 </p>
 
 </footer>
+
+<script>
+fetch("https://api.github.com/repos/RachelMayne/rachelmayne.github.io/commits?per_page=1")
+.then(response => response.json())
+.then(data => {
+
+    const date = new Date(data[0].commit.committer.date);
+
+    document.getElementById("last-updated").textContent =
+        date.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+})
+.catch(() => {
+    document.getElementById("last-updated").textContent = "Recently";
+});
+</script>
 
 </body>
 
