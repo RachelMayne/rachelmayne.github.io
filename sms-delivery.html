@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>SMS Delivery Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="profile">
+
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+
+<div>
+
+<h1>Rachel Mayne</h1>
+
+<p class="tagline">
+Technical Support Engineer | SaaS | API & Integration Troubleshooting
+</p>
+
+</div>
+
+</div>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<hr>
+
+</header>
+
+<p class="breadcrumb">
+Home › Portfolio › Technical Investigations › SMS Delivery Investigation
+</p>
+
+<div class="card">
+
+<h2>SMS Delivery Investigation</h2>
+
+<p>
+This investigation demonstrates my approach to analysing third-party integration issues within a live SaaS platform. The objective was to determine why SMS appointment reminders were consistently failing for a specific group of users, gather technical evidence and identify whether the issue originated within the application or an external provider.
+</p>
+
+<section>
+
+<h3>Investigation Summary</h3>
+
+<table class="metadata">
+
+<tr>
+<td>System</td>
+<td>SMS Notifications</td>
+</tr>
+
+<tr>
+<td>Issue Type</td>
+<td>Third-party Integration Investigation</td>
+</tr>
+
+<tr>
+<td>Severity</td>
+<td>Medium</td>
+</tr>
+
+<tr>
+<td>Customer Impact</td>
+<td>Patients were not receiving appointment reminder SMS messages.</td>
+</tr>
+
+<tr>
+<td>Investigation</td>
+<td>Support Engineering</td>
+</tr>
+
+<tr>
+<td>Outcome</td>
+<td>Investigation isolated the issue to external carrier support through the SMS provider.</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h3>Background</h3>
+
+<p>
+
+A customer reported that appointment reminder SMS messages were not being delivered to patients using Jersey mobile numbers. SMS delivery was working successfully for UK mainland mobile networks, suggesting the problem was limited to a specific destination.
+
+</p>
+
+<p>
+
+As SMS reminders are an important part of the patient booking journey, identifying whether the issue originated within the application, SMS provider or mobile network was essential before escalation.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Objective</h3>
+
+<p>
+
+Determine whether the SMS delivery failures were caused by application behaviour, configuration, message generation or external carrier routing, and provide Engineering with sufficient evidence for escalation.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Investigation Timeline</h3>
+
+<ol class="timeline">
+
+<li>Customer reported SMS reminders failing for Jersey mobile numbers.</li>
+
+<li>Verified reminder configuration within the customer's account.</li>
+
+<li>Confirmed reminder generation was functioning normally.</li>
+
+<li>Compared successful UK deliveries against unsuccessful Jersey deliveries.</li>
+
+<li>Tested multiple destination numbers.</li>
+
+<li>Reviewed provider documentation and supported destinations.</li>
+
+<li>Confirmed Bandwidth did not currently support SMS delivery to Jersey networks.</li>
+
+<li>Provided findings and documented investigation for Product and Engineering.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h3>Investigation</h3>
+
+<p>
+
+The investigation focused on eliminating each possible failure point before concluding the issue originated outside the application.
+
+</p>
+
+<ul>
+
+<li>Verified SMS reminders were being generated successfully.</li>
+
+<li>Confirmed customer configuration was correct.</li>
+
+<li>Compared successful and unsuccessful message deliveries.</li>
+
+<li>Tested different mobile destinations to identify a geographical pattern.</li>
+
+<li>Reviewed third-party provider documentation.</li>
+
+<li>Confirmed the behaviour matched current carrier support limitations.</li>
+
+<li>Documented findings and recommended escalation path.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Evidence Collected</h3>
+
+<p>
+
+Testing demonstrated that reminder generation, scheduling and application behaviour were operating correctly. Failures occurred only when messages were sent to Jersey mobile numbers, indicating the issue existed beyond the application itself.
+
+</p>
+
+<p>
+
+Evidence collected included:
+
+</p>
+
+<ul>
+
+<li>Configuration validation.</li>
+
+<li>Comparison of successful and unsuccessful deliveries.</li>
+
+<li>Destination-specific testing.</li>
+
+<li>Provider documentation.</li>
+
+<li>Assessment of customer impact.</li>
+
+<li>Technical notes supporting Engineering review.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Technologies Used</h3>
+
+<div class="tech-stack">
+<span class="tech-tag">WriteUpp</span>
+<span class="tech-tag">Bandwidth</span>
+<span class="tech-tag">SMS Notifications</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Manual Testing</span>
+<span class="tech-tag">Third-party Integrations</span>
+</div>
+
+</section>
+
+<section>
+
+<h3>Outcome</h3>
+
+<p>
+
+The investigation demonstrated that the application was functioning correctly and isolated the failure to external carrier support provided through Bandwidth. This prevented unnecessary development work and enabled Product and Engineering to pursue the appropriate escalation route.
+
+</p>
+
+<p>
+
+Although the underlying limitation was outside the application's control, providing structured evidence ensured Engineering could quickly understand the issue, communicate accurately with stakeholders and manage customer expectations.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Skills Demonstrated</h3>
+
+<ul>
+
+<li>Technical troubleshooting.</li>
+
+<li>Third-party integration investigation.</li>
+
+<li>Root cause analysis.</li>
+
+<li>Evidence-based troubleshooting.</li>
+
+<li>Customer issue ownership.</li>
+
+<li>Technical documentation.</li>
+
+<li>Cross-functional collaboration.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<h3>Technical Reflection</h3>
+
+<p>
+
+This investigation reinforced the importance of avoiding assumptions during troubleshooting. By systematically validating each stage of the SMS workflow, I was able to eliminate the application as the source of the problem and identify an external provider limitation. Structured investigation reduced unnecessary engineering effort and ensured escalation was based on evidence rather than speculation.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<strong>Why this investigation matters</strong>
+
+<p>
+
+This investigation demonstrates my approach to Support Engineering: understanding customer impact, systematically eliminating possible causes, investigating third-party integrations, gathering technical evidence and communicating findings that enable informed engineering decisions.
+
+</p>
+
+</div>
+
+</section>
+
+<p>
+
+<a class="back-link" href="portfolio.html">← Back to Technical Investigations</a>
+
+</p>
+
+</div>
+
+<hr>
+
+<footer>
+
+<p>
+
+© 2026 Rachel Mayne |
+
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
