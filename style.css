@@ -291,6 +291,23 @@ section {
 
 }
 
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tech-tag {
+    background: #eef5fb;
+    border: 1px solid #c9dced;
+    color: #1f4e79;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
 /* ==========================================
    Cards
    ========================================== */
