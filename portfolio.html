@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <title>Technical Portfolio | Rachel Mayne</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
 
 <div class="profile">
-
 <img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
-
 <div>
-
 <h1>Rachel Mayne</h1>
-
-<p class="tagline">
-Technical Support Engineer | SaaS | API & Integration Troubleshooting
-</p>
-
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
 </div>
-
 </div>
 
 <nav class="navbar">
-
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="portfolio.html" class="active">Portfolio</a>
 <a href="experience.html">Experience</a>
 <a href="contact.html">Contact</a>
-
 </nav>
 
 <hr>
@@ -46,140 +34,71 @@ Technical Support Engineer | SaaS | API & Integration Troubleshooting
 <h2>Technical Portfolio</h2>
 
 <p>
-This portfolio showcases how I investigate production issues within live SaaS environments. Each case study demonstrates the structured approach I use to reproduce customer-reported problems, analyse application behaviour, gather technical evidence and communicate findings clearly to Product and Engineering teams.
+This portfolio showcases production investigations carried out within live SaaS environments. Each case study demonstrates my structured approach to reproducing customer-reported issues, identifying root causes, gathering technical evidence and collaborating with Engineering and Product to resolve complex problems.
 </p>
 
-<p>
-Rather than focusing solely on outcomes, these investigations demonstrate analytical thinking, structured troubleshooting, root cause analysis and collaborative problem-solving across real production systems.
-</p>
+<div class="stats-bar">
+<span>12+ Production Investigations</span>
+<span>Root Cause Analysis</span>
+<span>Stripe â€¢ Xero â€¢ APIs â€¢ Raygun</span>
+<span>Support &amp; Engineering Collaboration</span>
+</div>
 
 <section>
 
-<h3>Technical Investigations</h3>
+<h3>Featured Production Investigations</h3>
 
-<div class="portfolio-grid">
+<div class="featured-grid">
 
-<a href="online-booking.html" class="portfolio-link">
-<div class="portfolio-card">
-
-<h4>
-<span class="status-dot"></span>Online Booking Edge Case Investigation
-</h4>
-
-<p>
-Reproduced an intermittent booking failure caused by an unexpected interaction between appointment availability and booking restrictions.
-</p>
-
+<a href="data-hygiene.html" class="portfolio-link">
+<div class="featured-card">
+<h3><span class="status-dot"></span>Data Hygiene Investigation</h3>
+<p>Comparative testing identified that attachment uploads were not updating the value used by the Data Hygiene Tool, preventing recent activity from being recognised correctly.</p>
 <div class="tech-stack">
-<span class="tech-tag">WriteUpp</span>
+<span class="tech-tag">Root Cause</span>
+<span class="tech-tag">Data Retention</span>
 <span class="tech-tag">Jira</span>
-<span class="tech-tag">Raygun</span>
-<span class="tech-tag">Bug Reproduction</span>
+<span class="tech-tag">Comparative Testing</span>
 </div>
-
 </div>
 </a>
 
-<a href="sms-delivery.html" class="portfolio-link">
-<div class="portfolio-card">
-
-<h4>
-<span class="status-dot"></span>SMS Delivery Investigation
-</h4>
-
-<p>
-Investigated SMS reminders failing for Jersey mobile numbers and isolated the issue to an external telecommunications provider through structured testing.
-</p>
-
+<a href="availability-refresh.html" class="portfolio-link">
+<div class="featured-card">
+<h3><span class="status-dot"></span>OBv2 Availability Refresh</h3>
+<p>Investigated refresh timing and state synchronisation to identify why updated appointment availability was not immediately visible to patients.</p>
 <div class="tech-stack">
-<span class="tech-tag">Bandwidth</span>
-<span class="tech-tag">SMS</span>
-<span class="tech-tag">Third-Party APIs</span>
-<span class="tech-tag">Evidence Gathering</span>
+<span class="tech-tag">Online Booking</span>
+<span class="tech-tag">Browser Tools</span>
+<span class="tech-tag">State Analysis</span>
+<span class="tech-tag">Production</span>
 </div>
-
 </div>
 </a>
 
 <a href="integrated-payments.html" class="portfolio-link">
-<div class="portfolio-card">
-
-<h4>
-<span class="status-dot"></span>Integrated Payments Investigation
-</h4>
-
-<p>
-Analysed payment workflow behaviour, validated transaction processing and documented evidence supporting Engineering investigation.
-</p>
-
+<div class="featured-card">
+<h3><span class="status-dot"></span>Integrated Payments</h3>
+<p>Analysed payment processing workflows and gathered structured evidence that enabled Engineering to reproduce and resolve transaction issues.</p>
 <div class="tech-stack">
 <span class="tech-tag">Stripe</span>
 <span class="tech-tag">Payments</span>
 <span class="tech-tag">APIs</span>
-<span class="tech-tag">Troubleshooting</span>
+<span class="tech-tag">Investigation</span>
 </div>
-
-</div>
-</a>
-
-<a href="calendar-sync.html" class="portfolio-link">
-<div class="portfolio-card">
-
-<h4>
-<span class="status-dot"></span>Calendar Synchronisation Investigation
-</h4>
-
-<p>
-Investigated third-party calendar synchronisation behaviour, evaluated expected functionality and researched modern integration approaches.
-</p>
-
-<div class="tech-stack">
-<span class="tech-tag">Calendars</span>
-<span class="tech-tag">REST APIs</span>
-<span class="tech-tag">Integrations</span>
-<span class="tech-tag">Research</span>
-</div>
-
 </div>
 </a>
 
-<a href="filename-truncation.html" class="portfolio-link">
-<div class="portfolio-card">
-
-<h4>
-<span class="status-dot"></span>Filename Truncation Investigation
-</h4>
-
-<p>
-Reproduced an unexpected filename truncation issue during document uploads and documented reliable reproduction steps.
-</p>
-
+<a href="sms-delivery.html" class="portfolio-link">
+<div class="featured-card">
+<h3><span class="status-dot"></span>SMS Delivery</h3>
+<p>Isolated an intermittent messaging issue through structured testing, proving the failure originated with an external telecommunications provider.</p>
 <div class="tech-stack">
-<span class="tech-tag">Manual Testing</span>
-<span class="tech-tag">Bug Reproduction</span>
-<span class="tech-tag">Documentation</span>
+<span class="tech-tag">Bandwidth</span>
+<span class="tech-tag">Third-Party</span>
+<span class="tech-tag">Evidence</span>
+<span class="tech-tag">Testing</span>
 </div>
-
-</div>
-</a>
-
-<a href="iframe-printing.html" class="portfolio-link">
-<div class="portfolio-card">
-
-<h4>
-<span class="status-dot"></span>Assessment Printing Investigation
-</h4>
-
-<p>
-Investigated PDF rendering inconsistencies across browser printing scenarios and documented findings for Engineering review.
-</p>
-
-<div class="tech-stack">
-<span class="tech-tag">HTML</span>
-<span class="tech-tag">CSS</span>
-<span class="tech-tag">Browser Testing</span>
-</div>
-
 </div>
 </a>
 
@@ -189,36 +108,50 @@ Investigated PDF rendering inconsistencies across browser printing scenarios and
 
 <section>
 
-<h3>Technical Skills & Learning</h3>
+<h3>Additional Case Studies</h3>
 
-<p>
-Alongside documenting production investigations, I'm continually expanding my technical knowledge through practical projects, independent research and building this portfolio.
-</p>
+<div class="case-study-links">
+
+<a href="xero-export.html" class="case-button">Xero Bulk Export</a>
+<a href="magic-link.html" class="case-button">Mobile Magic Link</a>
+<a href="portal-edit.html" class="case-button">Appointment Portal Edit</a>
+<a href="calendar-sync.html" class="case-button">Calendar Synchronisation</a>
+<a href="form-emails.html" class="case-button">Form Delivery</a>
+<a href="soap-scribe.html" class="case-button">SOAP Scribe</a>
+<a href="filename-truncation.html" class="case-button">Filename Truncation</a>
+<a href="iframe-printing.html" class="case-button">Assessment Printing</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h3>Technical Skills</h3>
 
 <div class="tech-stack">
-
 <span class="tech-tag">REST APIs</span>
 <span class="tech-tag">OAuth 2.0</span>
-<span class="tech-tag">Webhooks</span>
 <span class="tech-tag">Git</span>
 <span class="tech-tag">GitHub</span>
 <span class="tech-tag">JSON</span>
 <span class="tech-tag">HTML</span>
 <span class="tech-tag">CSS</span>
+<span class="tech-tag">Browser Developer Tools</span>
+<span class="tech-tag">Raygun</span>
+<span class="tech-tag">Jira</span>
 <span class="tech-tag">Technical Documentation</span>
-<span class="tech-tag">Support Engineering</span>
-<span class="tech-tag">SaaS Platforms</span>
-
+<span class="tech-tag">Production Support</span>
 </div>
 
 </section>
 
 <section>
 
-<h3>What's Next</h3>
+<h3>Why This Portfolio</h3>
 
 <p>
-This portfolio will continue to grow with additional investigations, API integration projects and technical write-ups covering SaaS architecture, authentication, observability, integrations and production troubleshooting. My aim is to demonstrate not only the issues I've investigated, but the structured engineering approach I apply when solving complex technical problems.
+Rather than simply listing technologies, these investigations demonstrate how I approach unfamiliar problems, validate assumptions through structured testing, communicate findings clearly and help Engineering reach the root cause more quickly.
 </p>
 
 </section>
@@ -228,21 +161,13 @@ This portfolio will continue to grow with additional investigations, API integra
 <hr>
 
 <footer>
-
 <p>
-
-© 2026 Rachel Mayne |
-
+&copy; 2026 Rachel Mayne |
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-
 <a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
-
 <a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
 </p>
-
 </footer>
 
 </body>
-
 </html>
