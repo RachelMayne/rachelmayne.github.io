@@ -87,10 +87,9 @@ My portfolio showcases real production investigations covering payment integrati
 
 <div>
 
-<h4>15+</h4>
+<h4 id="case-count">Loading...</h4>
 
 <p>Production investigations documented across APIs, integrations and live incidents.</p>
-
 </div>
 
 </div>
@@ -347,6 +346,8 @@ Thank you for visiting my portfolio. If you're recruiting for a Technical Suppor
 
 <p>
 
+  <p id="last-updated" style="text-align:center;color:#888;font-size:14px;"></p>
+
 &copy; 2026 Rachel Mayne |
 
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
@@ -358,6 +359,56 @@ Thank you for visiting my portfolio. If you're recruiting for a Technical Suppor
 </p>
 
 </footer>
+
+  <script>
+// ===== CONFIG =====
+const owner = "RachelMayne";
+const repo = "rachelmayne.github.io";
+
+// Files that AREN'T case studies
+const ignoreFiles = [
+  "index.html",
+  "about.html",
+  "contact.html",
+  "experience.html",
+  "portfolio.html",
+  "404.html"
+];
+
+// ===== Last Updated =====
+fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`)
+  .then(r => r.json())
+  .then(data => {
+
+      const date = new Date(data[0].commit.committer.date);
+
+      document.getElementById("last-updated").innerHTML =
+        "Last updated: " +
+        date.toLocaleDateString("en-GB",{
+          day:"numeric",
+          month:"long",
+          year:"numeric"
+        });
+
+  });
+
+
+// ===== Count Case Studies =====
+fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
+.then(r => r.json())
+.then(files => {
+
+    const count = files.filter(file =>
+
+        file.name.endsWith(".html") &&
+        !ignoreFiles.includes(file.name)
+
+    ).length;
+
+    document.getElementById("case-count").textContent = count + "+";
+
+});
+  </script>
 
 </body>
 
