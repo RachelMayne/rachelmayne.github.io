@@ -452,3 +452,45 @@ overflow:auto;
     line-height: 1.6;
     font-size: .95rem;
 }
+.job {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.company {
+    color: #4d657f;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.job-date {
+    color: #666;
+    font-size: .95rem;
+    margin-bottom: 1rem;
+}
+
+.highlights {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+
+.highlights li {
+    margin-bottom: .4rem;
+}
+
+.section-intro {
+    max-width: 850px;
+    line-height: 1.8;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
