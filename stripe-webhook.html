@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stripe Webhook Payment Failure Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="profile">
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+<div>
+<h1>Rachel Mayne</h1>
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
+</div>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
+</header>
+
+<p class="breadcrumb">Home &gt; Portfolio &gt; Technical Investigations &gt; Stripe Webhook Payment Failure Investigation</p>
+
+<div class="card">
+
+<h2>Stripe Webhook Payment Failure Investigation</h2>
+
+<p>This investigation demonstrates my approach to diagnosing a production payment integration issue where a successful Stripe transaction did not complete the downstream booking workflow due to a failed webhook process.</p>
+
+<section>
+<h3>Investigation Summary</h3>
+<table class="metadata">
+<tr><td>System</td><td>Stripe Payment Integration</td></tr>
+<tr><td>Issue Type</td><td>Webhook Processing Failure</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Successful payments resulted in missing patient records, duplicate bookings and customer confusion.</td></tr>
+<tr><td>Investigation</td><td>Production Incident Investigation</td></tr>
+<tr><td>Outcome</td><td>Root cause identified and evidence supported a production hotfix.</td></tr>
+</table>
+</section>
+
+<section>
+<h3>Background</h3>
+<p>A customer completed payment successfully through Stripe, but the appointment and patient record were not created correctly within the Clinical SaaS Platform. The incomplete workflow resulted in duplicate bookings and duplicate payments.</p>
+</section>
+
+<section>
+<h3>Objective</h3>
+<p>Determine whether the issue was caused by user error or a system integration failure, minimise customer impact and provide Engineering with evidence to support remediation.</p>
+</section>
+
+<section>
+<h3>Investigation Timeline</h3>
+<ol class="timeline">
+<li>Reviewed customer reports and booking history.</li>
+<li>Verified successful Stripe payment.</li>
+<li>Examined appointment records and internal logs.</li>
+<li>Identified failure during webhook processing.</li>
+<li>Escalated evidence to Engineering.</li>
+<li>Processed refunds for duplicate payments.</li>
+<li>Kept the customer informed throughout the investigation.</li>
+<li>Verified behaviour after the production hotfix.</li>
+</ol>
+</section>
+
+<section>
+<h3>Investigation</h3>
+<ul>
+<li>Compared payment confirmation with appointment creation.</li>
+<li>Reviewed booking workflow for missing patient records.</li>
+<li>Analysed internal logs to identify the failed webhook event.</li>
+<li>Confirmed the payment gateway had completed successfully.</li>
+<li>Documented technical findings and customer impact.</li>
+<li>Worked closely with Engineering until a hotfix was deployed.</li>
+</ul>
+</section>
+
+<section>
+<h3>Evidence Collected</h3>
+<ul>
+<li>Stripe payment confirmation.</li>
+<li>Booking and appointment history.</li>
+<li>Webhook processing evidence.</li>
+<li>Internal system logs.</li>
+<li>Duplicate payment records.</li>
+<li>Engineering escalation notes.</li>
+</ul>
+</section>
+
+<section>
+<h3>Technologies Used</h3>
+<div class="tech-stack">
+<span class="tech-tag">Clinical SaaS Platform</span>
+<span class="tech-tag">Stripe</span>
+<span class="tech-tag">Webhooks</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Browser Developer Tools</span>
+</div>
+</section>
+
+<section>
+<h3>Outcome</h3>
+<p>The investigation confirmed that the issue was caused by a backend webhook handling failure rather than customer error. Duplicate payments were refunded promptly, customers received regular updates and Engineering used the investigation findings to deploy a production hotfix that prevented further disruption.</p>
+</section>
+
+<section>
+<h3>Skills Demonstrated</h3>
+<ul>
+<li>Production incident management.</li>
+<li>Webhook and API troubleshooting.</li>
+<li>Payment integration analysis.</li>
+<li>Customer communication.</li>
+<li>Cross-functional collaboration.</li>
+<li>Evidence-based root cause investigation.</li>
+</ul>
+</section>
+
+<section>
+<div class="callout">
+<h3>Technical Reflection</h3>
+<p>Complex payment workflows extend beyond successful transactions. Validating each downstream process helped identify that the payment gateway had succeeded while webhook processing had failed, allowing Engineering to focus on the true root cause.</p>
+</div>
+</section>
+
+<section>
+<div class="callout">
+<strong>Why this investigation matters</strong>
+<p>This investigation demonstrates my ability to diagnose complex production issues involving third-party integrations, distinguish infrastructure faults from user error, manage customer communications during incidents and provide high-quality technical evidence that supports rapid production fixes.</p>
+</div>
+</section>
+
+<p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
+
+</div>
+
+<hr>
+
+<footer>
+<p>&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
