@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OBv2 Availability Refresh Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="profile">
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+<div>
+<h1>Rachel Mayne</h1>
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
+</div>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
+</header>
+
+<p class="breadcrumb">
+Home &gt; Portfolio &gt; Technical Investigations &gt; OBv2 Availability Refresh Investigation
+</p>
+
+<div class="card">
+
+<h2>OBv2 Availability Refresh Investigation</h2>
+
+<p>
+This investigation demonstrates my approach to diagnosing an issue affecting appointment availability within the Online Booking v2 (OBv2) service of a Healthcare Practice Management Platform. The objective was to determine why recently updated availability was not immediately reflected to patients, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+</p>
+
+<section>
+<h3>Investigation Summary</h3>
+<table class="metadata">
+<tr><td>System</td><td>Online Booking v2 (OBv2)</td></tr>
+<tr><td>Issue Type</td><td>Availability Refresh Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Patients could see outdated appointment availability, leading to booking confusion.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Engineering reproduced the refresh behaviour and implemented improvements.</td></tr>
+</table>
+</section>
+
+<section>
+<h3>Background</h3>
+<p>Customers reported that changes to clinician availability or appointment slots were not always visible immediately within the online booking portal, despite appearing correctly within the platform.</p>
+<p>As this affected patient self-service booking, it was important to determine whether the issue related to synchronisation, refresh timing or application behaviour.</p>
+</section>
+
+<section>
+<h3>Objective</h3>
+<p>Identify why appointment availability was not refreshing as expected, establish repeatable reproduction steps and provide Engineering with structured diagnostic evidence.</p>
+</section>
+
+<section>
+<h3>Investigation Timeline</h3>
+<ol class="timeline">
+<li>Reviewed customer reports and booking history.</li>
+<li>Created test appointment availability.</li>
+<li>Compared platform availability with the OBv2 portal.</li>
+<li>Repeated tests after configuration changes.</li>
+<li>Captured timestamps, screenshots and browser observations.</li>
+<li>Documented findings within Jira.</li>
+<li>Worked with Engineering to reproduce the behaviour.</li>
+<li>Verified the resolution following deployment.</li>
+</ol>
+</section>
+
+<section>
+<h3>Investigation</h3>
+<p>The investigation followed the complete booking workflow to determine when refreshed availability became visible and under which conditions delays occurred.</p>
+<ul>
+<li>Compared internal scheduling with portal availability.</li>
+<li>Tested different appointment types and locations.</li>
+<li>Observed refresh behaviour after schedule updates.</li>
+<li>Reviewed browser requests using Developer Tools.</li>
+<li>Produced consistent reproduction steps.</li>
+<li>Provided structured evidence for Engineering.</li>
+</ul>
+</section>
+
+<section>
+<h3>Evidence Collected</h3>
+<ul>
+<li>Step-by-step reproduction guide.</li>
+<li>Availability comparisons.</li>
+<li>Timestamps and screenshots.</li>
+<li>Browser network observations.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
+</ul>
+</section>
+
+  <section>
+
+<h3>Root Cause Analysis</h3>
+
+<p>
+
+The initial investigation confirmed that appointment availability updates were being saved successfully within the Healthcare Practice Management Platform, but those changes were not always reflected immediately within Online Booking v2 (OBv2). Repeated testing demonstrated that the booking service continued to present outdated availability despite the underlying schedule having been amended.
+
+</p>
+
+<p>
+
+A temporary workaround was identified during the investigation. Removing the clinician from Online Booking availability and then re-enabling them forced the booking configuration to refresh, causing the updated availability to appear correctly. This workaround restored functionality for affected customers while Engineering continued investigating the underlying defect.
+
+</p>
+
+<p>
+
+Several months later, another customer experienced the same behaviour. By comparing the new incident with the original investigation, I recognised that the symptoms, reproduction steps and workaround were identical, allowing the two cases to be linked together. This additional evidence helped Engineering identify a consistent pattern that had not been apparent from a single occurrence.
+
+</p>
+
+<p>
+
+Engineering determined that the issue only occurred when a clinician's working hours were modified by a site administrator rather than by the clinician updating their own availability. The Online Booking availability refresh process only detected changes made through the clinician's own working hours workflow, meaning administrator-initiated changes did not trigger the refresh. Saving the clinician's Online Booking availability effectively forced the refresh process, which explained why the workaround consistently resolved the issue.
+
+</p>
+
+<div class="callout">
+
+<strong>Confirmed Root Cause</strong>
+
+<p>
+
+Online Booking only refreshed appointment availability when changes were detected through the clinician's own working hours update process. When working hours were amended by a site administrator, the refresh event was not triggered, leaving outdated availability visible until the Online Booking configuration was manually saved, forcing the availability to refresh.
+
+</p>
+
+</div>
+
+  </section>
+
+<section>
+<h3>Technologies Used</h3>
+<div class="tech-stack">
+<span class="tech-tag">Healthcare Practice Management Platform</span>
+<span class="tech-tag">Online Booking v2</span>
+<span class="tech-tag">Browser Developer Tools</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Raygun</span>
+<span class="tech-tag">Manual Testing</span>
+</div>
+</section>
+
+<section>
+<h3>Outcome</h3>
+<p>Providing detailed reproduction steps and timing evidence enabled Engineering to isolate the refresh behaviour and improve the consistency of appointment availability shown to patients.</p>
+<p>The investigation reduced repeat support cases and improved confidence in the online booking experience.</p>
+</section>
+
+<section>
+<h3>Skills Demonstrated</h3>
+<ul>
+<li>Workflow analysis.</li>
+<li>Browser-based troubleshooting.</li>
+<li>State and refresh investigation.</li>
+<li>Evidence gathering.</li>
+<li>Technical documentation.</li>
+<li>Cross-functional collaboration.</li>
+</ul>
+</section>
+
+<section>
+<div class="callout">
+<h3>Technical Reflection</h3>
+<p>Time-based issues can be difficult to isolate. Careful comparison of application state, portal behaviour and browser requests helped identify a repeatable pattern that Engineering could investigate effectively.</p>
+</div>
+</section>
+
+<section>
+<div class="callout">
+<strong>Why this investigation matters</strong>
+<p>This investigation demonstrates my ability to troubleshoot synchronisation and refresh behaviour across customer-facing SaaS applications, combining technical analysis with structured evidence to support efficient production issue resolution.</p>
+</div>
+</section>
+
+<p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
+
+</div>
+
+<hr>
+
+<footer>
+<p>&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
