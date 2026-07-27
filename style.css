@@ -100,36 +100,41 @@ hr{
 
 /* ---------- Buttons ---------- */
 
-.button,.btn{
+.button,
+.btn{
     display:inline-block;
     background:#1f4e79;
     color:#fff;
     padding:12px 22px;
-    border-radius:8px;
+    border:2px solid transparent;
+    border-radius:10px;
     font-weight:bold;
     box-shadow:0 3px 10px rgba(0,0,0,.12);
+    transition:.2s;
+    margin-right:12px;
 }
 
-.button:hover,.btn:hover{
+.button:hover,
+.btn:hover{
     background:#15497f;
     transform:translateY(-2px);
 }
 
 .button-secondary{
     display:inline-block;
-    margin-left:8px;
     padding:12px 22px;
-    border-radius:8px;
     border:2px solid #1f4e79;
+    border-radius:10px;
     color:#1f4e79;
     background:#fff;
     font-weight:bold;
+    transition:.2s;
 }
 
 .button-secondary:hover{
     background:#eef5fb;
+    transform:translateY(-2px);
 }
-
 /* ---------- Main Card ---------- */
 
 .card{
