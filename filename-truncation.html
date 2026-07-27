@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Filename Truncation Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="profile">
+
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+
+<div>
+
+<h1>Rachel Mayne</h1>
+
+<p class="tagline">
+Technical Support Engineer | SaaS | API & Integration Troubleshooting
+</p>
+
+</div>
+
+</div>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<hr>
+
+</header>
+
+<p class="breadcrumb">
+Home › Portfolio › Technical Investigations › Filename Truncation Investigation
+</p>
+
+<div class="card">
+
+<h2>Filename Truncation Investigation</h2>
+
+<p>
+This investigation demonstrates my approach to reproducing a customer-reported document upload issue within a live SaaS platform. The objective was to determine why uploaded filenames were being unexpectedly shortened, identify the conditions required to reproduce the behaviour and provide Engineering with clear evidence for investigation.
+</p>
+
+<section>
+
+<h3>Investigation Summary</h3>
+
+<table class="metadata">
+
+<tr>
+<td>System</td>
+<td>Document Upload</td>
+</tr>
+
+<tr>
+<td>Issue Type</td>
+<td>Filename Truncation</td>
+</tr>
+
+<tr>
+<td>Severity</td>
+<td>Medium</td>
+</tr>
+
+<tr>
+<td>Customer Impact</td>
+<td>Uploaded document filenames were unexpectedly shortened, making documents difficult to identify.</td>
+</tr>
+
+<tr>
+<td>Investigation</td>
+<td>Support Engineering</td>
+</tr>
+
+<tr>
+<td>Outcome</td>
+<td>Issue reproduced, isolated and documented for Engineering.</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h3>Background</h3>
+
+<p>
+
+A customer reported that uploaded documents were not retaining their original filenames after being added to the system. Instead, portions of the filename appeared to be removed, making documents harder to identify once uploaded.
+
+</p>
+
+<p>
+
+The behaviour appeared inconsistent and could not initially be explained by browser, operating system or user error, requiring structured investigation.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Objective</h3>
+
+<p>
+
+Determine the conditions that caused filenames to be truncated, establish reliable reproduction steps and provide Engineering with sufficient technical evidence to investigate the behaviour.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Investigation Timeline</h3>
+
+<ol class="timeline">
+
+<li>Reviewed the original customer report.</li>
+
+<li>Uploaded multiple test documents using different filename lengths.</li>
+
+<li>Compared successful and truncated filenames.</li>
+
+<li>Tested different browsers and operating systems.</li>
+
+<li>Reviewed naming patterns including spaces, punctuation and long filenames.</li>
+
+<li>Repeated testing until consistent reproduction steps were established.</li>
+
+<li>Documented findings and supporting evidence within Jira.</li>
+
+<li>Provided Engineering with reproducible test cases.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h3>Investigation</h3>
+
+<p>
+
+The investigation focused on systematically eliminating possible causes while recreating the customer's workflow as closely as possible.
+
+</p>
+
+<ul>
+
+<li>Created multiple test files with varying filename lengths.</li>
+
+<li>Tested uploads across different browsers.</li>
+
+<li>Compared uploaded filenames against original filenames.</li>
+
+<li>Identified patterns where truncation consistently occurred.</li>
+
+<li>Confirmed behaviour using repeatable test cases.</li>
+
+<li>Recorded expected versus actual behaviour.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Evidence Collected</h3>
+
+<p>
+
+Testing established a repeatable scenario where filenames exceeding specific characteristics were consistently truncated after upload. The behaviour could be reproduced reliably using structured testing.
+
+</p>
+
+<p>
+
+Evidence collected included:
+
+</p>
+
+<ul>
+
+<li>Step-by-step reproduction instructions.</li>
+
+<li>Original versus truncated filenames.</li>
+
+<li>Screenshots demonstrating the behaviour.</li>
+
+<li>Browser and environment information.</li>
+
+<li>Expected versus actual behaviour.</li>
+
+<li>Technical notes for Engineering.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Technologies Used</h3>
+
+<div class="tech-stack">
+
+<span class="tech-tag">WriteUpp</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Manual Testing</span>
+<span class="tech-tag">Browser Developer Tools</span>
+<span class="tech-tag">File Upload</span>
+
+</div>
+
+</section>
+
+<section>
+
+<h3>Outcome</h3>
+
+<p>
+
+Providing structured reproduction steps and supporting evidence enabled Engineering to understand the issue quickly without requiring additional clarification from Support.
+
+</p>
+
+<p>
+
+Although I was not responsible for implementing the software fix, producing clear technical documentation reduced investigation time and improved collaboration between Support and Engineering.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Skills Demonstrated</h3>
+
+<ul>
+
+<li>Technical troubleshooting within a live SaaS platform.</li>
+
+<li>Structured bug reproduction.</li>
+
+<li>Root cause investigation.</li>
+
+<li>Systematic testing.</li>
+
+<li>Technical documentation.</li>
+
+<li>Cross-functional collaboration.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<h3>Technical Reflection</h3>
+
+<p>
+
+This investigation reinforced the importance of controlled testing when investigating customer-reported defects. Small changes to filenames, browser behaviour or test conditions can significantly influence reproduction, making structured testing essential for identifying consistent patterns.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<strong>Why this investigation matters</strong>
+
+<p>
+
+This investigation demonstrates my approach to Support Engineering: reproducing customer-reported software defects, gathering reliable technical evidence, communicating findings clearly and enabling Engineering to investigate efficiently.
+
+</p>
+
+</div>
+
+</section>
+
+<p>
+
+<a class="back-link" href="portfolio.html">← Back to Technical Investigations</a>
+
+</p>
+
+</div>
+
+<hr>
+
+<footer>
+
+<p>
+
+© 2026 Rachel Mayne |
+
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
