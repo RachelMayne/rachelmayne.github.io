@@ -41,93 +41,17 @@ Technical Support Engineer | SaaS | API & Integration Troubleshooting
 
 </header>
 
-<h3>Summary</h3>
-
-<ul>
-<li><strong>Area:</strong> Online Booking</li>
-<li><strong>Category:</strong> Bug Investigation</li>
-<li><strong>Priority:</strong> High</li>
-<li><strong>Status:</strong> Resolved</li>
-<li><strong>Skills:</strong> Reproduction, Investigation, Documentation</li>
-</ul>
-
 <h2>Online Booking Edge Case Investigation</h2>
 
 <p>
-A customer reported that appointments could not always be booked online, despite availability appearing to exist. The behaviour was inconsistent and only occurred under specific booking conditions, making it difficult to reproduce initially.
+This investigation documents the process followed to reproduce and analyse an intermittent issue affecting Online Booking. The objective was to identify a repeatable pattern, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the defect.
 </p>
 
-<h3>Objective</h3>
-
-<p>
-Determine why valid appointments were being rejected by the Online Booking system and provide Engineering with sufficient evidence to reproduce the issue.
-</p>
-
-<h3>Investigation Process</h3>
+<h3>Investigation Summary</h3>
 
 <ul>
-
-<li>Recreated the customer's booking configuration.</li>
-
-<li>Tested multiple appointment types, practitioners and booking dates.</li>
-
-<li>Compared successful and unsuccessful booking attempts.</li>
-
-<li>Reviewed the effect of booking restrictions on appointment availability.</li>
-
-<li>Repeated testing until a consistent reproduction method was identified.</li>
-
-</ul>
-
-<h3>Findings</h3>
-
-<p>
-Testing identified an edge case where the interaction between appointment availability and the configured 24-hour booking restriction prevented otherwise valid appointments from being created.
-</p>
-
-<p>
-Once the issue had been reproduced consistently, detailed evidence was collected including screenshots, reproduction steps, expected behaviour and actual behaviour before documenting the investigation for Engineering.
-</p>
-
-<h3>Outcome</h3>
-
-<p>
-Providing a structured investigation enabled Engineering to reproduce the issue quickly, prioritise the defect and implement an out-of-hours fix to restore normal booking functionality.
-</p>
-
-<h3>Skills Demonstrated</h3>
-
-<ul>
-
-<li>Technical troubleshooting</li>
-
-<li>Root cause investigation</li>
-
-<li>Bug reproduction</li>
-
-<li>Customer issue ownership</li>
-
-<li>Jira documentation</li>
-
-<li>Product & Engineering collaboration</li>
-
-</ul>
-
-<p>
-<a href="portfolio.html">← Back to Portfolio</a>
-</p>
-
-<hr>
-
-<footer>
-<p>
-© 2026 Rachel Mayne |
-<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-<a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
-<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-</p>
-</footer>
-
-</body>
-
-</html>
+<li><strong>System:</strong> Online Booking</li>
+<li><strong>Issue Type:</strong> Booking Workflow Edge Case</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Customer Impact:</strong> Valid appointments could not be booked online.</li>
+<li><
