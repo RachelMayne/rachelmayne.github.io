@@ -294,4 +294,55 @@ footer a {
 
 }
 
+   /* Investigation metadata table */
+
+.metadata {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.metadata td {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+}
+
+.metadata td:first-child {
+    width: 180px;
+    font-weight: bold;
+    background: #f5f7fa;
+}
+
+/* Investigation timeline */
+
+.timeline {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.timeline li {
+    margin-bottom: 10px;
+}
+
+/* Callout box */
+
+.callout {
+    background: #f8fbff;
+    border-left: 5px solid #2d5d86;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+/* Investigation sections */
+
+section {
+    margin-bottom: 35px;
+}
+
+/* Back link */
+
+.back-link {
+    margin-top: 30px;
+    display: inline-block;
+    font-weight: bold;
 }
