@@ -229,7 +229,7 @@ color:#1f4e79;
 }
 
 .featured-card::after{
-    content:"View Investigation \\2192";
+    content:"View Case Study \\2192";
     display:block;
     margin-top:18px;
     font-weight:bold;
