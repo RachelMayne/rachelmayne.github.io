@@ -149,6 +149,48 @@ The investigation focused on following the complete authentication journey from 
 
 </section>
 
+  <section>
+
+<h3>Root Cause Analysis</h3>
+
+<p>
+
+The investigation confirmed that SMS messages were being delivered successfully, indicating that the messaging service and notification workflow were functioning as expected. Repeated testing demonstrated that the failure occurred after users received the message, during the authentication process initiated by the magic link.
+
+</p>
+
+<p>
+
+By comparing successful and unsuccessful authentication attempts across multiple mobile devices and browsers, I established that the issue was not related to SMS delivery, recipient configuration or user permissions. The behaviour only occurred under specific conditions after the secure link had been opened, suggesting the fault existed within the application's authentication workflow rather than the third-party messaging provider.
+
+</p>
+
+<p>
+
+Providing Engineering with repeatable reproduction steps, affected device information, browser comparisons, timestamps and customer examples enabled them to isolate the authentication workflow more efficiently. Structured testing also ruled out common causes such as expired links, failed SMS delivery and incorrect customer configuration.
+
+</p>
+
+<p>
+
+Although the software fix was implemented by Engineering, the investigation significantly reduced diagnosis time by identifying the precise conditions required to reproduce the authentication failure consistently.
+
+</p>
+
+<div class="callout">
+
+<strong>Confirmed Root Cause</strong>
+
+<p>
+
+SMS messages were generated and delivered successfully. The authentication failure occurred within the application's magic link processing workflow after the user opened the secure link, rather than within the SMS delivery service itself.
+
+</p>
+
+</div>
+
+  </section>
+
 <section>
 
 <h3>Technologies Used</h3>
