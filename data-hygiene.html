@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Hygiene Last Intervention Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="profile">
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+<div>
+<h1>Rachel Mayne</h1>
+<p class="tagline">Technical Support Engineer | SaaS | Production Investigation &amp; Troubleshooting</p>
+</div>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
+</header>
+
+<p class="breadcrumb">
+Home &gt; Portfolio &gt; Technical Investigations &gt; Data Hygiene Last Intervention Investigation
+</p>
+
+<div class="card">
+
+<h2>Data Hygiene Last Intervention Investigation</h2>
+
+<p>
+This investigation demonstrates my approach to identifying a production defect affecting the Data Hygiene Tool within a Healthcare Practice Management Platform. By carrying out structured comparative testing, I established that recent attachment uploads were not updating the value used to determine whether a patient record was eligible for deletion, allowing Engineering to identify the root cause quickly.
+</p>
+
+<section>
+<h3>Investigation Summary</h3>
+<table class="metadata">
+<tr><td>System</td><td>Data Hygiene Tool</td></tr>
+<tr><td>Issue Type</td><td>Data Retention Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Patient records could appear eligible for deletion earlier than intended.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Root cause confirmed, accepted by Product and scheduled for release.</td></tr>
+</table>
+</section>
+
+<section>
+<h3>Background</h3>
+<p>A customer queried whether the Data Hygiene Tool was correctly determining when patient records became eligible for deletion. During the investigation I observed that some records remained eligible despite recent activity.</p>
+<p>Because this behaviour could affect customer confidence in data retention, it was important to determine whether the issue was expected or represented a product defect.</p>
+</section>
+
+<section>
+<h3>Objective</h3>
+<p>Determine which activities updated the value used by the Data Hygiene Tool, identify any pattern, assess the potential business impact and provide Engineering with reproducible evidence.</p>
+</section>
+
+<section>
+<h3>Investigation Timeline</h3>
+<ol class="timeline">
+<li>Reviewed the customer report.</li>
+<li>Reproduced the behaviour on a separate test site.</li>
+<li>Tested multiple historical patient records.</li>
+<li>Compared attachments, appointments and forms.</li>
+<li>Documented expected versus actual behaviour.</li>
+<li>Raised Jira WU-8604 with detailed evidence.</li>
+<li>Shared findings with the wider team.</li>
+<li>Worked with Engineering until the root cause was confirmed.</li>
+</ol>
+</section>
+
+<section>
+<h3>Investigation</h3>
+<p>Rather than relying on a single example, I designed comparative tests across several patient records and different intervention types.</p>
+<ul>
+<li>Verified behaviour on multiple older records.</li>
+<li>Compared attachment uploads with appointments and forms.</li>
+<li>Confirmed appointments and forms updated the Last Intervention date correctly.</li>
+<li>Established that attachment uploads did not update the value used by the Data Hygiene Tool.</li>
+<li>Recorded three reproducible scenarios with expected and actual outcomes.</li>
+<li>Escalated the potential data retention risk to Engineering and Product.</li>
+</ul>
+</section>
+
+<section>
+<h3>Evidence Collected</h3>
+<ul>
+<li>Three documented test scenarios.</li>
+<li>Expected versus actual behaviour comparisons.</li>
+<li>Screenshots and timestamps.</li>
+<li>Reproduction steps.</li>
+<li>Business impact assessment.</li>
+<li>Detailed Jira documentation.</li>
+</ul>
+</section>
+
+  <section>
+
+<h3>Root Cause Analysis</h3>
+
+<p>
+
+The investigation confirmed that the Data Hygiene Tool was correctly using the stored "Last Intervention" value to determine whether patient records were eligible for deletion. Comparative testing showed that appointments and forms updated this value as expected, whereas attachment uploads did not.
+
+</p>
+
+<p>
+
+By testing multiple historical patient records and comparing different activity types, I established that the issue was not related to the Data Hygiene Tool itself or customer configuration. The behaviour only occurred when attachments were added to a patient record, indicating that the underlying record was not being updated consistently for all intervention types.
+
+</p>
+
+<p>
+
+Providing Engineering with three repeatable test scenarios, expected versus actual behaviour, screenshots and business impact enabled them to isolate the defect quickly. Structured testing also ruled out alternative explanations such as incorrect Data Hygiene configuration, individual record anomalies or inconsistent customer usage.
+
+</p>
+
+<p>
+
+Development confirmed that the issue originated from the application logic responsible for updating the patient's last recorded activity. The investigation significantly reduced diagnosis time by identifying the specific workflow that consistently failed to update the value relied upon by the Data Hygiene Tool.
+
+</p>
+
+<div class="callout">
+
+<strong>Confirmed Root Cause</strong>
+
+<p>
+
+Attachment uploads did not update the underlying patient last contact value used by the Data Hygiene Tool to calculate the "Last Intervention" date. As a result, records containing recent attachment activity could incorrectly appear eligible for deletion because the most recent intervention was not being recognised.
+
+</p>
+
+</div>
+
+  </section>
+
+<section>
+<h3>Technologies Used</h3>
+<div class="tech-stack">
+<span class="tech-tag">Healthcare Practice Management Platform</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Manual Testing</span>
+<span class="tech-tag">Browser Developer Tools</span>
+</div>
+</section>
+
+<section>
+<h3>Outcome</h3>
+<p>Development confirmed the investigation was accurate. The root cause was that attachment uploads were not updating the underlying value used by the Data Hygiene Tool to calculate the Last Intervention date.</p>
+<p>The defect was accepted by Product, prioritised for a future release and scheduled for a fix. The investigation reduced developer investigation time and highlighted a potential data retention risk before it affected additional customers.</p>
+</section>
+
+<section>
+<h3>Skills Demonstrated</h3>
+<ul>
+<li>Structured test design.</li>
+<li>Comparative analysis.</li>
+<li>Production defect investigation.</li>
+<li>Risk identification.</li>
+<li>Technical documentation.</li>
+<li>Cross-functional collaboration.</li>
+</ul>
+</section>
+
+<section>
+<div class="callout">
+<h3>Technical Reflection</h3>
+<p>This investigation reinforced the importance of structured testing rather than relying on a single customer example. Comparing multiple workflows made it possible to isolate the defect, identify its wider business impact and provide Engineering with a concise, high-quality bug report.</p>
+</div>
+</section>
+
+<section>
+<div class="callout">
+<strong>Why this investigation matters</strong>
+<p>This case study demonstrates my ability to investigate complex production issues, identify hidden patterns through comparative testing and communicate actionable evidence that enables Engineering and Product teams to make informed decisions.</p>
+</div>
+</section>
+
+<p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
+
+</div>
+
+<hr>
+
+<footer>
+<p>&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
