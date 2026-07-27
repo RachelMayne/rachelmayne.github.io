@@ -20,7 +20,7 @@
 <h1>Rachel Mayne</h1>
 
 <p class="tagline">
-Technical Support Engineer | SaaS | API & Integration Troubleshooting
+Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting
 </p>
 
 </div>
@@ -43,14 +43,14 @@ Technical Support Engineer | SaaS | API & Integration Troubleshooting
 
 <div class="card">
 
-<h2>Technical Support Engineer | SaaS | API & Integration Troubleshooting</h2>
+<h2>Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</h2>
 
 <p>
 I investigate production issues within live SaaS platforms, reproduce customer-reported software defects and collaborate closely with Product and Engineering teams to identify root causes, gather technical evidence and improve product reliability.
 </p>
 
 <p>
-Rather than simply listing technologies, this portfolio demonstrates how I approach technical investigations, structured troubleshooting and collaborative problem-solving within real production environments.
+My portfolio showcases real production investigations covering payment integrations, APIs, webhooks, third-party services, AI governance and application behaviour, demonstrating how I approach structured troubleshooting in complex SaaS environments.
 </p>
 
 <p>
@@ -73,7 +73,7 @@ Rather than simply listing technologies, this portfolio demonstrates how I appro
 
 <h4>12+</h4>
 
-<p>Years supporting websites, digital platforms and SaaS applications.</p>
+<p>Years supporting websites, digital products and SaaS applications.</p>
 
 </div>
 
@@ -87,9 +87,9 @@ Rather than simply listing technologies, this portfolio demonstrates how I appro
 
 <div>
 
-<h4>660+</h4>
+<h4>15+</h4>
 
-<p>Technical support tickets resolved every month while maintaining SLAs.</p>
+<p>Production investigations documented across APIs, integrations and live incidents.</p>
 
 </div>
 
@@ -104,23 +104,23 @@ Rather than simply listing technologies, this portfolio demonstrates how I appro
 <h3>What I Do</h3>
 
 <p>
-Throughout my career I've supported SaaS platforms, websites and digital products, helping customers resolve complex technical issues while working closely with internal teams to improve products, processes and customer experience.
+I specialise in reproducing production defects, validating customer-reported issues and producing structured technical evidence that enables Engineering teams to identify root causes efficiently.
 </p>
 
 <p>
-Today I specialise in reproducing software defects, analysing application behaviour, validating customer reports and producing structured technical evidence that enables Engineering teams to investigate efficiently.
+My investigations regularly involve payment platforms, REST APIs, webhooks, browser debugging, production monitoring, third-party integrations and customer-facing technical documentation.
 </p>
 
 <div class="tech-stack">
 
-<span class="tech-tag">Bug Reproduction</span>
-<span class="tech-tag">Technical Investigations</span>
+<span class="tech-tag">Production Support</span>
+<span class="tech-tag">Root Cause Analysis</span>
 <span class="tech-tag">REST APIs</span>
-<span class="tech-tag">Payments</span>
-<span class="tech-tag">Integrations</span>
-<span class="tech-tag">Documentation</span>
-<span class="tech-tag">Jira</span>
+<span class="tech-tag">Webhooks</span>
+<span class="tech-tag">Stripe</span>
 <span class="tech-tag">Raygun</span>
+<span class="tech-tag">Technical Documentation</span>
+<span class="tech-tag">Jira</span>
 
 </div>
 
@@ -134,21 +134,21 @@ Today I specialise in reproducing software defects, analysing application behavi
 
 <div class="portfolio-grid">
 
-<a href="online-booking.html" class="portfolio-link">
+<a href="stripe-webhook.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Online Booking Edge Case Investigation</h4>
+<h4><span class="status-dot"></span>Stripe Webhook Payment Failure</h4>
 
 <p>
-Reproduced an intermittent booking failure caused by an unexpected interaction between appointment availability and booking restrictions.
+Diagnosed a production webhook failure where successful Stripe payments did not complete downstream booking creation, enabling Engineering to deploy a production hotfix.
 </p>
 
 <div class="tech-stack">
 
-<span class="tech-tag">WriteUpp</span>
-<span class="tech-tag">Jira</span>
-<span class="tech-tag">Raygun</span>
+<span class="tech-tag">Stripe</span>
+<span class="tech-tag">Webhooks</span>
+<span class="tech-tag">Production</span>
 
 </div>
 
@@ -156,21 +156,42 @@ Reproduced an intermittent booking failure caused by an unexpected interaction b
 
 </a>
 
-<a href="integrated-payments.html" class="portfolio-link">
+<a href="data-hygiene.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Integrated Payments Investigation</h4>
+<h4><span class="status-dot"></span>Data Hygiene Investigation</h4>
 
 <p>
-Investigated payment workflow behaviour and validated transaction processing to support Engineering investigations.
+Comparative testing identified an application behaviour issue affecting data retention calculations and enabled Engineering to reproduce the problem.
 </p>
 
 <div class="tech-stack">
 
-<span class="tech-tag">Stripe</span>
-<span class="tech-tag">Payments</span>
-<span class="tech-tag">APIs</span>
+<span class="tech-tag">Root Cause</span>
+<span class="tech-tag">Testing</span>
+<span class="tech-tag">Jira</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="availability-refresh.html" class="portfolio-link">
+
+<div class="portfolio-card">
+
+<h4><span class="status-dot"></span>Online Booking Availability Refresh</h4>
+
+<p>
+Investigated application state synchronisation to determine why appointment availability changes were not immediately visible to patients.
+</p>
+
+<div class="tech-stack">
+
+<span class="tech-tag">State Analysis</span>
+<span class="tech-tag">Browser Tools</span>
 
 </div>
 
@@ -185,7 +206,7 @@ Investigated payment workflow behaviour and validated transaction processing to 
 <h4><span class="status-dot"></span>SMS Delivery Investigation</h4>
 
 <p>
-Investigated SMS reminder failures and isolated the issue to an external telecommunications provider.
+Isolated an intermittent messaging issue through structured testing, proving the failure originated with an external telecommunications provider.
 </p>
 
 <div class="tech-stack">
@@ -199,20 +220,43 @@ Investigated SMS reminder failures and isolated the issue to an external telecom
 
 </a>
 
-<a href="calendar-sync.html" class="portfolio-link">
+<a href="integrated-payments.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Calendar Synchronisation Investigation</h4>
+<h4><span class="status-dot"></span>Stripe Invoice Synchronisation</h4>
 
 <p>
-Investigated calendar synchronisation behaviour, expected functionality and modern scheduling APIs.
+Compared successful and failed payment synchronisation events to isolate an intermittent Stripe integration issue.
 </p>
 
 <div class="tech-stack">
 
-<span class="tech-tag">Calendars</span>
-<span class="tech-tag">REST APIs</span>
+<span class="tech-tag">Stripe</span>
+<span class="tech-tag">Payments</span>
+<span class="tech-tag">API</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="ai-governance.html" class="portfolio-link">
+
+<div class="portfolio-card">
+
+<h4><span class="status-dot"></span>AI Governance &amp; DPIA Leadership</h4>
+
+<p>
+Produced validated customer guidance covering AI governance, DPIA considerations and implementation for an AI-powered clinical documentation solution.
+</p>
+
+<div class="tech-stack">
+
+<span class="tech-tag">AI</span>
+<span class="tech-tag">Governance</span>
+<span class="tech-tag">Documentation</span>
 
 </div>
 
@@ -237,13 +281,13 @@ Investigated calendar synchronisation behaviour, expected functionality and mode
 <h3>How I Work</h3>
 
 <p><strong>Investigate</strong><br>
-Understand customer impact, reproduce reported behaviour and gather structured technical evidence.</p>
+Reproduce customer-reported behaviour, understand business impact and collect structured technical evidence.</p>
 
 <p><strong>Analyse</strong><br>
-Compare expected and actual behaviour, identify patterns and isolate likely causes.</p>
+Compare expected and actual behaviour, identify recurring patterns and isolate likely root causes using logs, monitoring and comparative testing.</p>
 
 <p><strong>Communicate</strong><br>
-Produce clear technical documentation that enables Product and Engineering teams to investigate efficiently.</p>
+Provide clear technical documentation and collaborate with Engineering, Product and customers throughout the investigation lifecycle.</p>
 
 </section>
 
@@ -254,7 +298,7 @@ Produce clear technical documentation that enables Product and Engineering teams
 <h3>Current Learning</h3>
 
 <p>
-Alongside documenting real production investigations, I'm continually expanding my knowledge through practical projects and independent research.
+Alongside documenting real production investigations, I continue developing practical knowledge of APIs, webhooks, Git, AI governance and modern SaaS architecture through hands-on projects and independent research.
 </p>
 
 <div class="tech-stack">
@@ -268,8 +312,8 @@ Alongside documenting real production investigations, I'm continually expanding 
 <span class="tech-tag">HTML</span>
 <span class="tech-tag">CSS</span>
 <span class="tech-tag">Technical Documentation</span>
+<span class="tech-tag">AI Governance</span>
 <span class="tech-tag">Support Engineering</span>
-<span class="tech-tag">SaaS Platforms</span>
 
 </div>
 
@@ -282,7 +326,7 @@ Alongside documenting real production investigations, I'm continually expanding 
 <h3>Let's Connect</h3>
 
 <p>
-Thank you for visiting my portfolio. If you're recruiting for a Technical Support Engineer or SaaS Support Engineer, or would simply like to discuss production troubleshooting, technical investigations or API integrations, I'd be delighted to hear from you.
+Thank you for visiting my portfolio. If you're recruiting for a Technical Support Engineer, Application Support Engineer or Customer Support Engineer with experience investigating production issues, APIs, integrations and SaaS platforms, I'd be delighted to hear from you.
 </p>
 
 <p>
@@ -303,7 +347,7 @@ Thank you for visiting my portfolio. If you're recruiting for a Technical Suppor
 
 <p>
 
-© 2026 Rachel Mayne |
+&copy; 2026 Rachel Mayne |
 
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
 
