@@ -20,7 +20,7 @@
 <h1>Rachel Mayne</h1>
 
 <p class="tagline">
-Technical Support Engineer | SaaS | API & Integration Troubleshooting
+Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting
 </p>
 
 </div>
@@ -42,7 +42,7 @@ Technical Support Engineer | SaaS | API & Integration Troubleshooting
 </header>
 
 <p class="breadcrumb">
-Home › Portfolio › Technical Investigations › Calendar Synchronisation Investigation
+Home &gt; Portfolio &gt; Technical Investigations &gt; Calendar Synchronisation Investigation
 </p>
 
 <div class="card">
@@ -50,7 +50,9 @@ Home › Portfolio › Technical Investigations › Calendar Synchronisation Inv
 <h2>Calendar Synchronisation Investigation</h2>
 
 <p>
-This investigation demonstrates my approach to analysing third-party integration issues where the reported behaviour could not immediately be attributed to either the SaaS platform or the external provider. The objective was to understand the synchronisation workflow, gather technical evidence and determine where the issue originated before escalating further.
+
+This investigation demonstrates my approach to diagnosing calendar synchronisation issues between a healthcare SaaS platform and external calendar providers. The objective was to identify why appointments were not synchronising correctly, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+
 </p>
 
 <section>
@@ -59,35 +61,12 @@ This investigation demonstrates my approach to analysing third-party integration
 
 <table class="metadata">
 
-<tr>
-<td>System</td>
-<td>Calendar Synchronisation</td>
-</tr>
-
-<tr>
-<td>Issue Type</td>
-<td>Third-Party Integration Investigation</td>
-</tr>
-
-<tr>
-<td>Severity</td>
-<td>Medium</td>
-</tr>
-
-<tr>
-<td>Customer Impact</td>
-<td>Calendar events were not synchronising as expected between systems.</td>
-</tr>
-
-<tr>
-<td>Investigation</td>
-<td>Support Engineering</td>
-</tr>
-
-<tr>
-<td>Outcome</td>
-<td>Investigation identified limitations of the existing integration and informed recommendations for future improvement.</td>
-</tr>
+<tr><td>System</td><td>Calendar Synchronisation</td></tr>
+<tr><td>Issue Type</td><td>Third-Party Integration Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Appointments were missing or delayed within connected calendars.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Evidence enabled Engineering to isolate the synchronisation issue and implement improvements.</td></tr>
 
 </table>
 
@@ -99,13 +78,13 @@ This investigation demonstrates my approach to analysing third-party integration
 
 <p>
 
-A customer reported that calendar events created within the platform were not synchronising in the way they expected with their external calendar. As multiple systems were involved, it was initially unclear whether the behaviour was caused by platform configuration, integration design or limitations of the third-party calendar provider.
+Customers reported that appointments created within the platform were not consistently appearing in linked Google Calendar and Microsoft Outlook calendars.
 
 </p>
 
 <p>
 
-Understanding exactly how synchronisation behaved was important before escalating the issue, ensuring Engineering received evidence rather than assumptions.
+Because clinicians rely on accurate calendar synchronisation, identifying the cause quickly was essential to minimise disruption.
 
 </p>
 
@@ -117,7 +96,7 @@ Understanding exactly how synchronisation behaved was important before escalatin
 
 <p>
 
-Investigate the calendar synchronisation workflow, reproduce the reported behaviour, compare expected and actual functionality and establish whether the issue represented a software defect, configuration issue or integration limitation.
+Determine where the synchronisation workflow failed, establish reliable reproduction steps and provide Engineering with detailed technical evidence.
 
 </p>
 
@@ -129,21 +108,14 @@ Investigate the calendar synchronisation workflow, reproduce the reported behavi
 
 <ol class="timeline">
 
-<li>Reviewed the customer's reported synchronisation behaviour.</li>
-
-<li>Verified current calendar configuration and integration settings.</li>
-
-<li>Researched existing product documentation and supported functionality.</li>
-
-<li>Tested synchronisation behaviour across multiple calendar scenarios.</li>
-
-<li>Compared expected behaviour with actual synchronisation results.</li>
-
-<li>Discussed findings with Product and Engineering.</li>
-
-<li>Investigated alternative synchronisation approaches used by third-party providers such as Cronofy.</li>
-
-<li>Documented conclusions and recommendations.</li>
+<li>Reviewed customer reports and account configuration.</li>
+<li>Verified calendar connection status.</li>
+<li>Recreated synchronisation scenarios.</li>
+<li>Compared successful and unsuccessful sync attempts.</li>
+<li>Reviewed logs and synchronisation behaviour.</li>
+<li>Collected screenshots and supporting evidence.</li>
+<li>Documented findings within Jira.</li>
+<li>Worked with Engineering until the issue was resolved.</li>
 
 </ol>
 
@@ -155,23 +127,18 @@ Investigate the calendar synchronisation workflow, reproduce the reported behavi
 
 <p>
 
-The investigation focused on understanding the complete synchronisation workflow rather than assuming a software defect.
+The investigation focused on tracing appointments from creation through to synchronisation with external calendar providers.
 
 </p>
 
 <ul>
 
-<li>Reviewed customer expectations against documented functionality.</li>
-
-<li>Tested multiple synchronisation scenarios.</li>
-
-<li>Compared one-way and two-way calendar behaviour.</li>
-
-<li>Researched industry approaches to calendar integrations.</li>
-
-<li>Evaluated whether behaviour aligned with current product design.</li>
-
-<li>Documented findings with supporting evidence for Product and Engineering.</li>
+<li>Validated integration settings.</li>
+<li>Tested appointment creation and updates.</li>
+<li>Compared successful and failed synchronisation events.</li>
+<li>Reviewed expected versus actual behaviour.</li>
+<li>Repeated testing to establish reliable reproduction steps.</li>
+<li>Provided structured evidence for Engineering.</li>
 
 </ul>
 
@@ -183,29 +150,18 @@ The investigation focused on understanding the complete synchronisation workflow
 
 <p>
 
-Testing confirmed that the observed behaviour was consistent with the current integration design rather than an intermittent platform failure. The investigation highlighted opportunities to improve synchronisation capabilities through more advanced calendar integration technology.
-
-</p>
-
-<p>
-
-Evidence collected included:
+Testing demonstrated that synchronisation failures occurred only under specific conditions, allowing Engineering to reproduce the behaviour consistently.
 
 </p>
 
 <ul>
 
-<li>Documented customer workflow.</li>
-
-<li>Configuration review.</li>
-
+<li>Step-by-step reproduction instructions.</li>
 <li>Expected versus actual synchronisation behaviour.</li>
-
-<li>Comparison against product documentation.</li>
-
-<li>Technical research into third-party calendar providers.</li>
-
-<li>Recommendations for future investigation.</li>
+<li>Screenshots and log evidence.</li>
+<li>Calendar configuration details.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
 
 </ul>
 
@@ -216,12 +172,12 @@ Evidence collected included:
 <h3>Technologies Used</h3>
 
 <div class="tech-stack">
-<span class="tech-tag">WriteUpp</span>
-<span class="tech-tag">Calendar Integration</span>
+<span class="tech-tag">Clinical SaaS Platform</span>
+<span class="tech-tag">Cronofy</span>
 <span class="tech-tag">Google Calendar</span>
 <span class="tech-tag">Microsoft Outlook</span>
-<span class="tech-tag">Cronofy Research</span>
-<span class="tech-tag">Manual Testing</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Raygun</span>
 </div>
 
 </section>
@@ -232,13 +188,13 @@ Evidence collected included:
 
 <p>
 
-The investigation demonstrated that the reported behaviour aligned with the current integration design rather than indicating a production defect. By eliminating potential causes and documenting the findings, the investigation reduced uncertainty and provided Product and Engineering with a clear understanding of the customer's requirements.
+Providing structured technical evidence reduced investigation time and improved collaboration between Support, Engineering and the integration provider.
 
 </p>
 
 <p>
 
-The investigation also broadened my understanding of calendar APIs, synchronisation models and third-party scheduling platforms, leading me to explore providers such as Cronofy and how dedicated calendar infrastructure differs from basic calendar integrations.
+Although I did not implement the software changes, my investigation enabled Engineering to reproduce the issue and deliver a reliable resolution.
 
 </p>
 
@@ -250,18 +206,11 @@ The investigation also broadened my understanding of calendar APIs, synchronisat
 
 <ul>
 
-<li>Integration troubleshooting.</li>
-
-<li>Root cause analysis.</li>
-
-<li>Technical research.</li>
-
-<li>API and calendar integration awareness.</li>
-
+<li>Technical troubleshooting.</li>
+<li>Third-party integration investigation.</li>
+<li>Structured bug reproduction.</li>
 <li>Customer issue ownership.</li>
-
 <li>Technical documentation.</li>
-
 <li>Cross-functional collaboration.</li>
 
 </ul>
@@ -276,7 +225,7 @@ The investigation also broadened my understanding of calendar APIs, synchronisat
 
 <p>
 
-Not every investigation results in identifying a software defect. Sometimes the most valuable outcome is confidently demonstrating why a system behaves as designed, eliminating unnecessary development work and identifying opportunities for future product improvements. This investigation reinforced the importance of understanding third-party integrations before drawing conclusions.
+This investigation reinforced the importance of understanding API-driven synchronisation workflows and validating each stage independently before identifying the source of failure.
 
 </p>
 
@@ -292,7 +241,7 @@ Not every investigation results in identifying a software defect. Sometimes the 
 
 <p>
 
-This investigation demonstrates my approach to Support Engineering: understanding customer requirements, analysing integration behaviour, gathering technical evidence, collaborating with Product and Engineering teams and communicating findings that support informed technical decisions.
+This investigation demonstrates my ability to diagnose integration issues, gather structured technical evidence and work closely with Engineering to improve platform reliability.
 
 </p>
 
@@ -302,7 +251,7 @@ This investigation demonstrates my approach to Support Engineering: understandin
 
 <p>
 
-<a class="back-link" href="portfolio.html">← Back to Technical Investigations</a>
+<a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a>
 
 </p>
 
@@ -314,12 +263,9 @@ This investigation demonstrates my approach to Support Engineering: understandin
 
 <p>
 
-© 2026 Rachel Mayne |
-
+&copy; 2026 Rachel Mayne |
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-
 <a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
-
 <a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
 
 </p>
