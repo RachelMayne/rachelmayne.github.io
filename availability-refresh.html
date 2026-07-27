@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>OBv2 Availability Refresh Investigation | Rachel Mayne</title>
+<title>Online cardstigation | Rachel Mayne</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,16 +32,16 @@ Home &gt; Portfolio &gt; Technical Investigations &gt; OBv2 Availability Refresh
 
 <div class="card">
 
-<h2>OBv2 Availability Refresh Investigation</h2>
+<h2>Onlinen Booking Bookinginglability Refresh Investigation</h2>
 
 <p>
-This investigation demonstrates my approach to diagnosing an issue affecting appointment availability within the Online Booking v2 (OBv2) service of a Healthcare Practice Management Platform. The objective was to determine why recently updated availability was not immediately reflected to patients, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+This investigation demonstrates my approach to diagnosing an issue affecting appointment availability within the Online Booking service of a Healthcare Practice Management Platform. The objective was to determine why recently updated availability was not immediately reflected to patients, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
 </p>
 
 <section>
 <h3>Investigation Summary</h3>
 <table class="metadata">
-<tr><td>System</td><td>Online Booking v2 (OBv2)</td></tr>
+<tr><td>System</td><td>Online Booking/td></tr>
 <tr><td>Issue Type</td><td>Availability Refresh Investigation</td></tr>
 <tr><td>Severity</td><td>High</td></tr>
 <tr><td>Customer Impact</td><td>Patients could see outdated appointment availability, leading to booking confusion.</td></tr>
@@ -66,7 +66,7 @@ This investigation demonstrates my approach to diagnosing an issue affecting app
 <ol class="timeline">
 <li>Reviewed customer reports and booking history.</li>
 <li>Created test appointment availability.</li>
-<li>Compared platform availability with the OBv2 portal.</li>
+<li>Compared availability across platforms and booking portal</li>
 <li>Repeated tests after configuration changes.</li>
 <li>Captured timestamps, screenshots and browser observations.</li>
 <li>Documented findings within Jira.</li>
@@ -106,7 +106,7 @@ This investigation demonstrates my approach to diagnosing an issue affecting app
 
 <p>
 
-The initial investigation confirmed that appointment availability updates were being saved successfully within the Healthcare Practice Management Platform, but those changes were not always reflected immediately within Online Booking v2 (OBv2). Repeated testing demonstrated that the booking service continued to present outdated availability despite the underlying schedule having been amended.
+The initial investigation confirmed that appointment availability updates were being saved successfully within the Healthcare Practice Management Platform, but those changes were not always reflected immediately within Online Booking. Repeated testing demonstrated that the booking service continued to present outdated availability despite the underlying schedule having been amended.
 
 </p>
 
@@ -146,7 +146,7 @@ Online Booking only refreshed appointment availability when changes were detecte
 <h3>Technologies Used</h3>
 <div class="tech-stack">
 <span class="tech-tag">Healthcare Practice Management Platform</span>
-<span class="tech-tag">Online Booking v2</span>
+<span class="tech-tag">Online Booking</span>
 <span class="tech-tag">Browser Developer Tools</span>
 <span class="tech-tag">Jira</span>
 <span class="tech-tag">Raygun</span>
