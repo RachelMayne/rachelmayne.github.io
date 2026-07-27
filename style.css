@@ -198,32 +198,14 @@ hr {
 }
 
 /* ==========================================
-   Cards
-   ========================================== */
-
-.card {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-
-    margin-bottom: 25px;
-
-}
-
-/* ==========================================
-   Tables (Future CV)
+   Tables
    ========================================== */
 
 table {
 
     width: 100%;
-
     border-collapse: collapse;
+    margin-bottom: 30px;
 
 }
 
@@ -231,10 +213,95 @@ th,
 td {
 
     padding: 12px;
-
-    border-bottom: 1px solid #ddd;
-
+    border: 1px solid #ddd;
     text-align: left;
+
+}
+
+/* Investigation Metadata */
+
+.metadata td:first-child {
+
+    width: 180px;
+    font-weight: bold;
+    background: #f5f7fa;
+
+}
+
+/* ==========================================
+   Investigation Pages
+   ========================================== */
+
+section {
+
+    margin-bottom: 35px;
+
+}
+
+.timeline {
+
+    margin-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+.timeline li {
+
+    margin-bottom: 10px;
+
+}
+
+/* Information boxes */
+
+.callout {
+
+    background: #f8fbff;
+    border-left: 5px solid #1f4e79;
+    padding: 18px;
+    margin: 25px 0;
+    border-radius: 6px;
+
+}
+
+.callout h3 {
+
+    margin-top: 0;
+    border: none;
+    padding-bottom: 0;
+
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+
+}
+
+/* Back link */
+
+.back-link {
+
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+
+/* ==========================================
+   Cards
+   ========================================== */
+
+.card {
+
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
 
 }
 
@@ -255,9 +322,7 @@ img {
 footer {
 
     margin-top: 40px;
-
     font-size: 14px;
-
     color: #666;
 
 }
@@ -272,77 +337,47 @@ footer a {
    Mobile
    ========================================== */
 
-@media (max-width: 700px) {
+@media (max-width:700px) {
+
+body {
+
+    margin:20px;
+    padding:15px;
+
+}
 
 .profile {
 
-    flex-direction: column;
-
-    text-align: center;
+    flex-direction:column;
+    text-align:center;
 
 }
 
 .navbar {
 
-    justify-content: center;
+    justify-content:center;
 
 }
 
 .tagline {
 
-    font-size: 16px;
+    font-size:16px;
 
 }
 
-   /* Investigation metadata table */
+.profile-photo {
 
+    width:80px;
+    height:80px;
+
+}
+
+table,
 .metadata {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
+
+    display:block;
+    overflow-x:auto;
+
 }
 
-.metadata td {
-    border: 1px solid #d9d9d9;
-    padding: 10px;
-}
-
-.metadata td:first-child {
-    width: 180px;
-    font-weight: bold;
-    background: #f5f7fa;
-}
-
-/* Investigation timeline */
-
-.timeline {
-    margin-left: 20px;
-    margin-bottom: 25px;
-}
-
-.timeline li {
-    margin-bottom: 10px;
-}
-
-/* Callout box */
-
-.callout {
-    background: #f8fbff;
-    border-left: 5px solid #2d5d86;
-    padding: 15px;
-    margin: 25px 0;
-}
-
-/* Investigation sections */
-
-section {
-    margin-bottom: 35px;
-}
-
-/* Back link */
-
-.back-link {
-    margin-top: 30px;
-    display: inline-block;
-    font-weight: bold;
 }
