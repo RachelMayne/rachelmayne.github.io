@@ -175,6 +175,24 @@
         background:#62b44b;
         margin-right:8px;
     }
+.case-study-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.case-button{
+    padding:11px 18px;
+    border-radius:30px;
+    background:#eef5fb;
+    border:1px solid #c9dced;
+    font-weight:600;
+}
+
+.case-button:hover{
+    background:#1f4e79;
+    color:#fff;
+}
 
     /* ---------- Tags ---------- */
     .tech-stack{
