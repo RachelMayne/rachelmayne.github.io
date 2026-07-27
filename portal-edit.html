@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Appointment Portal Edit Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="profile">
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+<div>
+<h1>Rachel Mayne</h1>
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
+</div>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
+</header>
+
+<p class="breadcrumb">
+Home &gt; Portfolio &gt; Technical Investigations &gt; Appointment Portal Edit Investigation
+</p>
+
+<div class="card">
+
+<h2>Appointment Portal Edit Investigation</h2>
+
+<p>
+This investigation demonstrates my approach to diagnosing an issue affecting appointment editing through a patient portal within a Healthcare Practice Management Platform. The objective was to determine why appointment changes failed for some users, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+</p>
+
+<section>
+<h3>Investigation Summary</h3>
+<table class="metadata">
+<tr><td>System</td><td>Patient Appointment Portal</td></tr>
+<tr><td>Issue Type</td><td>Portal Workflow Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Patients could not reliably edit existing appointments.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Engineering reproduced the issue using supplied evidence and deployed a fix.</td></tr>
+</table>
+</section>
+
+<section>
+<h3>Background</h3>
+<p>Customers reported inconsistent behaviour when editing appointments through the online portal. Some changes completed successfully while others failed without a clear error.</p>
+<p>As the issue affected patient self-service, a structured investigation was required to isolate the conditions that triggered the behaviour.</p>
+</section>
+
+<section>
+<h3>Objective</h3>
+<p>Identify the conditions causing appointment edit failures, produce reliable reproduction steps and document technical evidence for Engineering.</p>
+</section>
+
+<section>
+<h3>Investigation Timeline</h3>
+<ol class="timeline">
+<li>Reviewed customer reports and support history.</li>
+<li>Recreated the appointment workflow using test accounts.</li>
+<li>Compared successful and unsuccessful edit attempts.</li>
+<li>Reviewed browser behaviour and application responses.</li>
+<li>Captured screenshots, timestamps and logs.</li>
+<li>Documented findings in Jira.</li>
+<li>Worked with Engineering to reproduce the issue.</li>
+<li>Verified the resolution after deployment.</li>
+</ol>
+</section>
+
+<section>
+<h3>Investigation</h3>
+<p>The investigation followed the complete appointment editing journey to determine where expected behaviour diverged from actual system responses.</p>
+<ul>
+<li>Validated appointment configuration.</li>
+<li>Tested multiple appointment types.</li>
+<li>Compared portal responses across different scenarios.</li>
+<li>Reviewed browser network activity.</li>
+<li>Established consistent reproduction steps.</li>
+<li>Provided structured evidence for Engineering.</li>
+</ul>
+</section>
+
+<section>
+<h3>Evidence Collected</h3>
+<ul>
+<li>Reproduction steps.</li>
+<li>Screenshots.</li>
+<li>Browser observations.</li>
+<li>Configuration comparisons.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
+</ul>
+</section>
+
+  <section>
+
+<h3>Root Cause Analysis</h3>
+
+<p>
+
+The investigation confirmed that appointment editing behaved differently across customer sites despite users following the same workflow. Testing demonstrated that the issue only affected older sites created using a legacy configuration, while newer sites processed appointment availability correctly.
+
+</p>
+
+<p>
+
+By comparing affected and unaffected sites, I established that the appointment editing workflow was interpreting a legacy <code>null</code> availability value differently. On older sites, the application treated this <code>null</code> value as <code>0</code>, preventing appointments from being edited even though valid availability existed. Newer sites, which had updated availability records, did not exhibit the same behaviour.
+
+</p>
+
+<p>
+
+Further testing identified that updating the site's availability forced the legacy records to be refreshed using the current data structure. Once availability had been updated, appointment editing functioned correctly without requiring any further configuration changes. This provided both a reliable workaround for affected customers and valuable evidence for Engineering to investigate the underlying defect.
+
+</p>
+
+<p>
+
+Providing Engineering with comparisons between legacy and updated sites, repeatable reproduction steps, configuration differences and customer examples enabled them to identify the inconsistency in how legacy availability values were processed. Structured testing also ruled out customer permissions, browser behaviour and appointment configuration as contributing factors.
+
+</p>
+
+<div class="callout">
+
+<strong>Confirmed Root Cause</strong>
+
+<p>
+
+Older customer sites contained legacy availability records where a <code>null</code> value was incorrectly interpreted as <code>0</code> during appointment editing. Refreshing the site's availability updated the legacy data structure, providing a successful workaround while Engineering investigated a permanent software fix.
+
+</p>
+
+</div>
+
+  </section>
+
+<section>
+<h3>Technologies Used</h3>
+<div class="tech-stack">
+<span class="tech-tag">Healthcare Practice Management Platform</span>
+<span class="tech-tag">Browser Developer Tools</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Raygun</span>
+<span class="tech-tag">Manual Testing</span>
+</div>
+</section>
+
+<section>
+<h3>Outcome</h3>
+<p>Structured evidence enabled Engineering to isolate the workflow defect and restore reliable appointment editing for affected customers.</p>
+<p>The investigation reduced repeat support contacts and improved the quality of information supplied with future portal issues.</p>
+</section>
+
+<section>
+<h3>Skills Demonstrated</h3>
+<ul>
+<li>Workflow analysis.</li>
+<li>Technical troubleshooting.</li>
+<li>Browser-based investigation.</li>
+<li>Bug reproduction.</li>
+<li>Technical documentation.</li>
+<li>Cross-functional collaboration.</li>
+</ul>
+</section>
+
+<section>
+<div class="callout">
+<h3>Technical Reflection</h3>
+<p>Testing complete customer journeys rather than isolated screens helped identify the precise point where the workflow failed and produced evidence that Engineering could reproduce consistently.</p>
+</div>
+</section>
+
+<section>
+<div class="callout">
+<strong>Why this investigation matters</strong>
+<p>This investigation demonstrates my ability to troubleshoot customer-facing portal workflows, analyse application behaviour and provide actionable technical evidence for production issue resolution.</p>
+</div>
+</section>
+
+<p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
+
+</div>
+
+<hr>
+
+<footer>
+<p>&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
