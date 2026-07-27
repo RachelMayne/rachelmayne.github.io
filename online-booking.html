@@ -1,54 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Online Booking Edge Case Investigation | Rachel Mayne</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
+
 <div class="profile">
+
 <img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+
 <div>
+
 <h1>Rachel Mayne</h1>
-<p class="tagline">Technical Support Engineer | SaaS | API & Integration Troubleshooting</p>
+
+<p class="tagline">
+Technical Support Engineer | SaaS | API & Integration Troubleshooting
+</p>
+
 </div>
+
 </div>
+
 <nav class="navbar">
+
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="portfolio.html" class="active">Portfolio</a>
 <a href="experience.html">Experience</a>
 <a href="contact.html">Contact</a>
+
 </nav>
+
 <hr>
+
 </header>
-<p class="breadcrumb">Home › Portfolio › Technical Investigations › Online Booking Edge Case Investigation</p>
+
+<p class="breadcrumb">
+Home › Portfolio › Technical Investigations › Online Booking Edge Case Investigation
+</p>  
+
 <div class="card">
+
 <h2>Online Booking Edge Case Investigation</h2>
-<p>This investigation demonstrates my approach to analysing a customer-reported issue within a live healthcare SaaS platform. The objective was to identify a repeatable booking edge case, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the reported behaviour.</p>
-<section><h3>Investigation Summary</h3>
+
+<p>
+This investigation demonstrates my approach to analysing customer-reported issues within a live SaaS platform. The objective was to identify a repeatable pattern, gather technical evidence and provide Engineering with sufficient information to investigate the reported behaviour.
+</p>
+
+<section>
+
+<h3>Investigation Summary</h3>
+
 <table class="metadata">
-<tr><td>System</td><td>Online Booking</td></tr>
-<tr><td>Issue Type</td><td>Booking Workflow Edge Case</td></tr>
-<tr><td>Severity</td><td>High</td></tr>
-<tr><td>Customer Impact</td><td>Patients were unable to complete valid online bookings.</td></tr>
-<tr><td>Investigation</td><td>Support Engineering</td></tr>
-<tr><td>Outcome</td><td>Engineering reproduced the defect and released a production fix.</td></tr>
-</table></section>
-<section><h3>Background</h3><p>A customer reported that appointments could not always be booked online despite appointment availability appearing to exist. The behaviour was intermittent and suggested an edge case rather than a general platform failure.</p><p>As Online Booking is customer-facing, identifying the cause quickly was important to minimise disruption and restore confidence.</p></section>
-<section><h3>Objective</h3><p>Determine why valid appointments were being rejected, establish reliable reproduction steps and provide Engineering with structured technical evidence.</p></section>
-<section><h3>Investigation Timeline</h3><ol class="timeline"><li>Reviewed the original report.</li><li>Recreated the customer's booking configuration.</li><li>Tested multiple booking scenarios.</li><li>Compared successful and unsuccessful outcomes.</li><li>Repeated testing using different availability combinations.</li><li>Identified the interaction between booking restrictions and availability.</li><li>Documented findings in Jira.</li><li>Engineering reproduced the issue and deployed a production fix.</li></ol></section>
-<section><h3>Investigation</h3><ul><li>Recreated customer configuration.</li><li>Tested appointment types and practitioners.</li><li>Compared successful and failed booking attempts.</li><li>Validated expected versus actual behaviour.</li><li>Recorded reliable reproduction steps.</li></ul></section>
-<section><h3>Evidence Collected</h3><ul><li>Reproduction instructions.</li><li>Expected vs actual behaviour.</li><li>Screenshots.</li><li>Configuration details.</li><li>Customer impact assessment.</li><li>Technical notes.</li></ul></section>
-<section><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-tag">Clinical SaaS Platform</span><span class="tech-tag">Online Booking</span><span class="tech-tag">Jira</span><span class="tech-tag">Raygun</span><span class="tech-tag">Manual Testing</span><span class="tech-tag">Browser Developer Tools</span></div></section>
-<section><h3>Outcome</h3><p>Providing structured evidence enabled Engineering to reproduce the defect quickly, prioritise the investigation and implement an out-of-hours production fix.</p><p>Clear technical documentation reduced investigation time and supported collaboration between Support, Product and Engineering.</p></section>
-<section><h3>Skills Demonstrated</h3><ul><li>Technical troubleshooting.</li><li>Structured bug reproduction.</li><li>Root cause investigation.</li><li>Technical documentation.</li><li>Cross-functional collaboration.</li></ul></section>
-<section><div class="callout"><h3>Technical Reflection</h3><p>Structured testing and reproducing customer workflows exactly as reported enabled Engineering to investigate efficiently.</p></div></section>
-<section><div class="callout"><strong>Why this investigation matters</strong><p>This investigation demonstrates evidence-based troubleshooting, engineering collaboration and customer-focused problem solving.</p></div></section>
-<p><a class="back-link" href="portfolio.html">← Back to Technical Investigations</a></p>
+
+<tr>
+<td>System</td>
+<td>Online Booking</td>
+</tr>
+
+<tr>
+<td>Issue Type</td>
+<td>Booking Workflow Edge Case</td>
+</tr>
+
+<tr>
+<td>Severity</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Customer Impact</td>
+<td>Patients were unable to complete valid online bookings.</td>
+</tr>
+
+<tr>
+<td>Investigation</td>
+<td>Support Engineering</td>
+</tr>
+
+<tr>
+<td>Outcome</td>
+<td>Engineering successfully reproduced the issue and released a production fix.</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h3>Background</h3>
+
+<p>
+
+A customer reported that appointments could not always be booked online despite appointment availability appearing to exist. The behaviour was inconsistent and could not initially be reproduced, suggesting an edge case rather than a general platform failure.
+
+</p>
+
+<p>
+
+As Online Booking is a customer-facing feature, understanding the cause of the issue was important to minimise disruption and restore confidence in the booking experience.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Objective</h3>
+
+<p>
+
+Determine why valid appointments were being rejected by the Online Booking system, establish reliable reproduction steps and provide Engineering with clear technical evidence for investigation.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Investigation Timeline</h3>
+
+<ol class="timeline">
+
+<li>Customer reported intermittent booking failures.</li>
+
+<li>Recreated the customer's booking configuration.</li>
+
+<li>Tested multiple appointment types, practitioners and booking dates.</li>
+
+<li>Compared successful and unsuccessful booking attempts.</li>
+
+<li>Repeated testing using different availability scenarios.</li>
+
+<li>Identified the interaction between booking restrictions and appointment availability.</li>
+
+<li>Documented findings within Jira.</li>
+
+<li>Engineering reproduced the issue and deployed a production fix.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h3>Investigation</h3>
+
+<p>
+
+The investigation focused on recreating the customer's environment while systematically eliminating possible causes.
+
+</p>
+
+<ul>
+
+<li>Recreated the customer's Online Booking configuration.</li>
+
+<li>Tested multiple appointment types and practitioner schedules.</li>
+
+<li>Compared successful and unsuccessful booking attempts.</li>
+
+<li>Repeated testing using different booking dates and appointment availability.</li>
+
+<li>Reviewed the interaction between booking restrictions and appointment availability.</li>
+
+<li>Documented every scenario until reliable reproduction steps were established.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Evidence Collected</h3>
+
+<p>
+
+Testing identified a repeatable edge case where the configured 24-hour booking restriction interacted unexpectedly with appointment availability. Under specific conditions the booking engine rejected appointments that should have been available.
+
+</p>
+
+<p>
+
+Evidence collected included:
+
+</p>
+
+<ul>
+
+<li>Step-by-step reproduction instructions.</li>
+
+<li>Expected versus actual behaviour.</li>
+
+<li>Screenshots demonstrating the issue.</li>
+
+<li>Configuration details.</li>
+
+<li>Assessment of customer impact.</li>
+
+<li>Technical notes for Engineering.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Technologies Used</h3>
+
+<div class="tech-stack">
+    <span class="tech-tag">WriteUpp</span>
+    <span class="tech-tag">Online Booking</span>
+    <span class="tech-tag">Jira</span>
+    <span class="tech-tag">Raygun</span>
+    <span class="tech-tag">Manual Testing</span>
+    <span class="tech-tag">Browser Developer Tools</span>
 </div>
+
+</section>
+
+<section>
+
+<h3>Outcome</h3>
+
+<p>
+
+Providing structured evidence enabled Engineering to reproduce the defect quickly, prioritise the issue and implement an out-of-hours production fix, restoring normal booking functionality.
+
+</p>
+
+<p>
+
+Although I was not responsible for implementing the software fix, providing clear technical documentation reduced investigation time and supported effective collaboration between Support, Product and Engineering.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Skills Demonstrated</h3>
+
+<ul>
+
+<li>Technical troubleshooting within a live SaaS platform.</li>
+
+<li>Structured bug reproduction.</li>
+
+<li>Root cause investigation.</li>
+
+<li>Customer issue ownership.</li>
+
+<li>Technical documentation.</li>
+
+<li>Cross-functional collaboration.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<h3>Technical Reflection</h3>
+
+<p>
+
+This investigation reinforced the importance of reproducing customer workflows exactly as reported. Seemingly intermittent issues are often caused by edge cases that only appear under specific configuration combinations. Structured testing and clear documentation reduced Engineering investigation time and supported a faster production resolution.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<strong>Why this investigation matters</strong>
+
+<p>
+
+This investigation demonstrates my approach to Support Engineering: understanding customer impact, reproducing software defects, gathering evidence, collaborating with Engineering teams and documenting findings that enable efficient issue resolution.
+
+</p>
+
+</div>
+
+</section>
+
+<p>
+
+<a class="back-link" href="portfolio.html">← Back to Technical Investigations</a>
+
+</p>
+  
+</div>  
+
 <hr>
-<footer><p>© 2026 Rachel Mayne | <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> | <a href="https://github.com/RachelMayne" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p></footer>
+
+<footer>
+
+<p>
+
+© 2026 Rachel Mayne |
+
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
+
+</p>
+
+</footer>
+
 </body>
+
 </html>
