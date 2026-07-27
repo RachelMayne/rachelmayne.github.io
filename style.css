@@ -437,3 +437,26 @@ table,
 }
 
 }
+.portfolio-card h4 a{
+    color:#1f4e79;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.portfolio-card h4 a:hover{
+    color:#2d6fa3;
+    text-decoration:underline;
+}
+
+.portfolio-card{
+    cursor:pointer;
+}
+.portfolio-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.portfolio-link:hover{
+    text-decoration:none;
+}
+
