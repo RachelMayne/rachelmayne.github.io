@@ -6,94 +6,156 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
 <div class="profile">
 <img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
-<div><h1>Rachel Mayne</h1><p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p></div>
+<div>
+<h1>Rachel Mayne</h1>
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
 </div>
+</div>
+
 <nav class="navbar">
 <a href="index.html">Home</a>
+<a href="about.html">About</a>
 <a href="portfolio.html" class="active">Portfolio</a>
-</nav><hr>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
 </header>
 
-<p class="breadcrumb">Home &gt; Portfolio &gt; SOAP Scribe Investigation</p>
+<p class="breadcrumb">
+Home &gt; Portfolio &gt; Technical Investigations &gt; SOAP Scribe Investigation
+</p>
 
 <div class="card">
+
 <h2>SOAP Scribe Investigation</h2>
 
-<p>Investigated issues affecting AI-generated clinical notes, reproducing transcription and synchronisation behaviour, gathering evidence from user workflows, logs and timestamps, and providing Engineering with reproducible cases to improve reliability.</p>
+<p>
+This investigation demonstrates my approach to diagnosing an issue affecting an AI-assisted SOAP note scribing feature within a Healthcare Practice Management Platform. The objective was to identify why generated clinical notes were incomplete or failed to save consistently, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+</p>
 
+<section>
 <h3>Investigation Summary</h3>
 <table class="metadata">
-<tr><td>System</td><td>AI-assisted clinical documentation</td></tr>
-<tr><td>Issue Type</td><td>AI Integration Investigation</td></tr>
+<tr><td>System</td><td>AI SOAP Scribe</td></tr>
+<tr><td>Issue Type</td><td>Feature Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Clinicians experienced interrupted documentation workflows and inconsistent note generation.</td></tr>
 <tr><td>Investigation</td><td>Support Engineering</td></tr>
-<tr><td>Outcome</td><td>Engineering used the supplied evidence to investigate and improve the identified behaviour.</td></tr>
+<tr><td>Outcome</td><td>Engineering reproduced the issue using structured evidence and implemented improvements.</td></tr>
 </table>
+</section>
 
+<section>
 <h3>Background</h3>
-<p>Customer reports indicated inconsistent behaviour that required structured troubleshooting across multiple environments and workflows.</p>
+<p>Customers reported that AI-generated SOAP notes occasionally failed to populate expected sections or did not save correctly after generation.</p>
+<p>As the feature formed part of clinicians' documentation workflow, identifying the cause quickly was essential to minimise disruption.</p>
+</section>
 
+<section>
 <h3>Objective</h3>
-<p>Identify the underlying cause, create reliable reproduction steps and provide actionable evidence for Engineering.</p>
+<p>Determine the conditions that caused inconsistent SOAP note generation, produce reliable reproduction steps and document actionable evidence for Engineering.</p>
+</section>
 
+<section>
 <h3>Investigation Timeline</h3>
 <ol class="timeline">
-<li>Reviewed customer reports.</li>
-<li>Reproduced the issue.</li>
-<li>Compared expected and actual behaviour.</li>
-<li>Collected logs, screenshots and timestamps.</li>
+<li>Reviewed customer reports and affected records.</li>
+<li>Recreated the workflow using test data.</li>
+<li>Compared successful and unsuccessful note generation.</li>
+<li>Reviewed application responses and error information.</li>
+<li>Captured timestamps, screenshots and supporting evidence.</li>
 <li>Documented findings in Jira.</li>
-<li>Worked with Engineering.</li>
-<li>Verified the fix.</li>
+<li>Worked with Engineering during investigation.</li>
+<li>Verified behaviour following deployment.</li>
 </ol>
+</section>
 
+<section>
+<h3>Investigation</h3>
+<p>The investigation focused on the complete workflow from initiating AI note generation through to reviewing and saving the completed SOAP record.</p>
+<ul>
+<li>Validated feature configuration.</li>
+<li>Tested multiple clinical scenarios.</li>
+<li>Compared expected and actual outputs.</li>
+<li>Reviewed monitoring data and browser behaviour.</li>
+<li>Established repeatable reproduction steps.</li>
+<li>Provided structured evidence for Engineering.</li>
+</ul>
+</section>
+
+<section>
 <h3>Evidence Collected</h3>
 <ul>
-<li>Reproduction steps</li>
-<li>Screenshots</li>
-<li>Logs and timestamps</li>
-<li>Customer impact assessment</li>
-<li>Technical documentation</li>
+<li>Step-by-step reproduction instructions.</li>
+<li>Screenshots and timestamps.</li>
+<li>Application monitoring information.</li>
+<li>Configuration comparisons.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
 </ul>
+</section>
 
+<section>
 <h3>Technologies Used</h3>
 <div class="tech-stack">
 <span class="tech-tag">Healthcare Practice Management Platform</span>
+<span class="tech-tag">AI SOAP Scribe</span>
 <span class="tech-tag">Jira</span>
 <span class="tech-tag">Raygun</span>
 <span class="tech-tag">Browser Developer Tools</span>
+<span class="tech-tag">Manual Testing</span>
 </div>
+</section>
 
+<section>
 <h3>Outcome</h3>
-<p>The investigation enabled efficient collaboration between Support and Engineering, improving diagnosis and reducing time to resolution.</p>
+<p>Providing structured technical evidence enabled Engineering to reproduce the issue consistently, improve feature reliability and reduce disruption to clinicians.</p>
+<p>The investigation strengthened collaboration between Support and Engineering while improving future investigations involving AI-assisted workflows.</p>
+</section>
 
+<section>
 <h3>Skills Demonstrated</h3>
 <ul>
-<li>Technical troubleshooting</li>
-<li>Workflow analysis</li>
-<li>Evidence gathering</li>
-<li>Cross-functional collaboration</li>
-<li>Technical documentation</li>
+<li>AI feature troubleshooting.</li>
+<li>Workflow analysis.</li>
+<li>Bug reproduction.</li>
+<li>Technical documentation.</li>
+<li>Evidence gathering.</li>
+<li>Cross-functional collaboration.</li>
 </ul>
+</section>
 
+<section>
 <div class="callout">
 <h3>Technical Reflection</h3>
-<p>Following complete customer workflows and validating assumptions with evidence consistently produced reliable investigations.</p>
+<p>Following the complete workflow and comparing successful and unsuccessful outcomes helped isolate the conditions that affected AI-generated documentation and provided Engineering with reproducible evidence.</p>
 </div>
+</section>
 
+<section>
 <div class="callout">
 <strong>Why this investigation matters</strong>
-<p>Demonstrates structured investigation, analytical problem-solving and effective collaboration within a SaaS support engineering environment.</p>
+<p>This investigation demonstrates my ability to troubleshoot AI-powered SaaS features, analyse complex user workflows and provide high-quality technical evidence that supports efficient production issue resolution.</p>
 </div>
+</section>
 
 <p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
+
 </div>
 
 <hr>
+
 <footer>
-<p>&copy; 2026 Rachel Mayne</p>
+<p>&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p>
 </footer>
+
 </body>
 </html>
