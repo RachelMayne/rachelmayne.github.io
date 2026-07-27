@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Xero Bulk Export Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="profile">
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+
+<div>
+<h1>Rachel Mayne</h1>
+
+<p class="tagline">
+Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting
+</p>
+
+</div>
+
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<hr>
+
+</header>
+
+<p class="breadcrumb">
+Home &gt; Portfolio &gt; Technical Investigations &gt; Xero Bulk Export Investigation
+</p>
+
+<div class="card">
+
+<h2>Xero Bulk Export Investigation</h2>
+
+<p>
+
+This investigation demonstrates my approach to diagnosing a financial integration issue affecting bulk invoice exports. The objective was to determine why exports failed under specific conditions, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+
+</p>
+
+<section>
+
+<h3>Investigation Summary</h3>
+
+<table class="metadata">
+<tr><td>System</td><td>Xero Integration</td></tr>
+<tr><td>Issue Type</td><td>Bulk Export Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Invoices could not be exported successfully to Xero.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Engineering reproduced the issue using the supplied evidence and implemented a fix.</td></tr>
+</table>
+
+</section>
+
+<section>
+
+<h3>Background</h3>
+
+<p>
+
+Customers reported that individual invoices exported successfully, while larger batches failed or completed only partially.
+
+</p>
+
+<p>
+
+Because accounting exports are business-critical, identifying the cause quickly was essential to minimise disruption.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Objective</h3>
+
+<p>
+
+Identify the conditions causing bulk export failures, establish reliable reproduction steps and provide Engineering with structured technical evidence.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Investigation Timeline</h3>
+
+<ol class="timeline">
+<li>Reviewed customer reports.</li>
+<li>Verified Xero connection status.</li>
+<li>Tested exports using different batch sizes.</li>
+<li>Compared successful and failed exports.</li>
+<li>Captured logs and screenshots.</li>
+<li>Documented findings within Jira.</li>
+<li>Worked with Engineering during investigation.</li>
+<li>Confirmed successful resolution.</li>
+</ol>
+
+</section>
+
+<section>
+
+<h3>Investigation</h3>
+
+<p>
+
+Testing focused on reproducing the export failure while isolating variables such as invoice volume and export workflow.
+
+</p>
+
+<ul>
+<li>Recreated customer export scenarios.</li>
+<li>Tested multiple batch sizes.</li>
+<li>Compared successful and failed exports.</li>
+<li>Validated expected versus actual behaviour.</li>
+<li>Collected supporting evidence.</li>
+<li>Produced reliable reproduction steps.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h3>Evidence Collected</h3>
+
+<ul>
+<li>Step-by-step reproduction instructions.</li>
+<li>Export logs.</li>
+<li>Screenshots.</li>
+<li>Configuration details.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h3>Root Cause Analysis</h3>
+
+<p>
+
+The investigation confirmed that the SaaS platform was successfully generating and submitting SMS messages for delivery. Testing demonstrated that failures only occurred for Jersey mobile numbers, while standard UK mobile numbers continued to receive messages successfully.
+
+</p>
+
+<p>
+
+By comparing affected numbers, researching regional numbering plans and escalating the issue directly with Bandwidth, I established that the failure did not originate within the application. Bandwidth confirmed that it did not provide carrier coverage for Jersey mobile networks, despite Jersey sharing the <strong>+44</strong> country code with the United Kingdom.
+
+</p>
+
+<p>
+
+Further investigation showed that another SMS provider, Twilio, handled the same numbering ranges differently. This confirmed that the issue resulted from provider-specific routing behaviour rather than application logic.
+
+</p>
+
+<p>
+
+Working alongside Product, I proposed a future enhancement that would identify Jersey (and later Isle of Man) mobile prefixes and automatically route those messages through an alternative SMS provider. Although this was outside the scope of the immediate incident, the investigation supplied the technical evidence required to support future development.
+
+</p>
+
+<div class="callout">
+
+<strong>Confirmed Root Cause</strong>
+
+<p>
+
+SMS delivery failures were caused by missing carrier coverage within the third-party SMS provider for Jersey mobile networks. The application generated messages correctly; the failure occurred after messages left the platform during external telecommunications routing.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h3>Technologies Used</h3>
+
+<div class="tech-stack">
+<span class="tech-tag">Clinical SaaS Platform</span>
+<span class="tech-tag">Xero</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Raygun</span>
+<span class="tech-tag">Manual Testing</span>
+<span class="tech-tag">Browser Developer Tools</span>
+</div>
+
+</section>
+
+<section>
+
+<h3>Outcome</h3>
+
+<p>
+
+Providing structured evidence enabled Engineering to reproduce the export failure efficiently and implement a production fix.
+
+</p>
+
+<p>
+
+The investigation improved collaboration between Support, Engineering and customers while reducing investigation time.
+
+</p>
+
+</section>
+
+<section>
+
+<h3>Skills Demonstrated</h3>
+
+<ul>
+<li>Technical troubleshooting.</li>
+<li>API integration investigation.</li>
+<li>Structured bug reproduction.</li>
+<li>Technical documentation.</li>
+<li>Customer issue ownership.</li>
+<li>Cross-functional collaboration.</li>
+</ul>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<h3>Technical Reflection</h3>
+
+<p>
+
+Testing both successful and failed export scenarios helped isolate the conditions that triggered the issue and produced reliable evidence for Engineering.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="callout">
+
+<strong>Why this investigation matters</strong>
+
+<p>
+
+This investigation demonstrates my ability to troubleshoot third-party accounting integrations, reproduce complex defects and provide actionable evidence that supports rapid issue resolution.
+
+</p>
+
+</div>
+
+</section>
+
+<p>
+<a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a>
+</p>
+
+</div>
+
+<hr>
+
+<footer>
+
+<p>
+
+&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
