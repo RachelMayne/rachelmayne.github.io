@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Delivery Investigation | Rachel Mayne</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="profile">
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+<div>
+<h1>Rachel Mayne</h1>
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
+</div>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
+</header>
+
+<p class="breadcrumb">
+Home &gt; Portfolio &gt; Technical Investigations &gt; Form Delivery Investigation
+</p>
+
+<div class="card">
+
+<h2>Form Delivery Investigation</h2>
+
+<p>
+This investigation demonstrates my approach to diagnosing a form delivery issue affecting customer communications within a healthcare practice management SaaS platform. The objective was to identify why completed forms were not reaching recipients consistently, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+</p>
+
+<section>
+<h3>Investigation Summary</h3>
+<table class="metadata">
+<tr><td>System</td><td>Digital Form Delivery</td></tr>
+<tr><td>Issue Type</td><td>Delivery Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Forms were not consistently delivered to intended recipients.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Evidence enabled Engineering to identify the delivery failure and improve reliability.</td></tr>
+</table>
+</section>
+
+<section>
+<h3>Background</h3>
+<p>Customers reported that forms appeared to send successfully but were not always received by patients.</p>
+<p>Because the issue affected communication and operational workflows, a structured investigation was required.</p>
+</section>
+
+<section>
+<h3>Objective</h3>
+<p>Trace the complete delivery workflow, identify where failures occurred and provide Engineering with reproducible evidence.</p>
+</section>
+
+<section>
+<h3>Investigation Timeline</h3>
+<ol class="timeline">
+<li>Reviewed customer reports.</li>
+<li>Verified form configuration.</li>
+<li>Tested multiple delivery scenarios.</li>
+<li>Compared successful and failed deliveries.</li>
+<li>Collected logs, timestamps and screenshots.</li>
+<li>Documented findings in Jira.</li>
+<li>Worked with Engineering to reproduce the issue.</li>
+<li>Verified behaviour after deployment.</li>
+</ol>
+</section>
+
+<section>
+<h3>Investigation</h3>
+<p>The investigation followed the end-to-end workflow from form generation through to delivery confirmation.</p>
+<ul>
+<li>Validated customer configuration.</li>
+<li>Compared expected and actual delivery behaviour.</li>
+<li>Reviewed application logs and monitoring data.</li>
+<li>Tested different recipient scenarios.</li>
+<li>Created reliable reproduction steps.</li>
+<li>Provided structured evidence for Engineering.</li>
+</ul>
+</section>
+
+<section>
+<h3>Evidence Collected</h3>
+<ul>
+<li>Reproduction steps.</li>
+<li>Delivery timestamps.</li>
+<li>Screenshots.</li>
+<li>Configuration comparisons.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
+</ul>
+</section>
+
+<section>
+
+<h3>Root Cause Analysis</h3>
+
+<p>
+
+The investigation confirmed that forms were being generated successfully and requests were reaching the external delivery API. Testing showed that issues only occurred when a large number of forms were submitted within a short period, causing delivery requests to exceed the rate the API could process reliably.
+
+</p>
+
+<p>
+
+By comparing successful and unsuccessful delivery attempts, I established that the application workflow and customer configuration were functioning correctly. API responses confirmed that requests sent in rapid succession could be delayed or rejected due to rate limiting, meaning some forms were not delivered even though users initially received confirmation that the send process had started.
+
+</p>
+
+<p>
+
+Providing Engineering with repeatable reproduction steps, delivery timestamps, API responses and customer examples enabled them to reproduce the behaviour consistently. The investigation ruled out common causes such as incorrect form configuration, recipient details and application permissions, confirming that the issue only occurred during high-volume submission scenarios.
+
+</p>
+
+<p>
+
+Following the investigation, Engineering updated the customer-facing warning message to make the delivery limitations clearer and enhanced the delivered reports so customers could more accurately identify which forms had been processed successfully.
+
+</p>
+
+<div class="callout">
+
+<strong>Confirmed Root Cause</strong>
+
+<p>
+
+Forms were submitted to the delivery API successfully, but sending large numbers of requests in rapid succession exceeded the API's processing limits. Engineering improved the warning message presented to users and updated the delivered report to provide clearer visibility of successful deliveries.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+<h3>Technologies Used</h3>
+<div class="tech-stack">
+<span class="tech-tag">Healthcare Practice Management Platform</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Raygun</span>
+<span class="tech-tag">Browser Developer Tools</span>
+<span class="tech-tag">Manual Testing</span>
+</div>
+</section>
+
+<section>
+<h3>Outcome</h3>
+<p>Structured evidence enabled Engineering to isolate the delivery failure and implement improvements that increased delivery reliability.</p>
+<p>The investigation reduced repeat incidents and improved communication between Support and Engineering.</p>
+</section>
+
+<section>
+<h3>Skills Demonstrated</h3>
+<ul>
+<li>Workflow analysis.</li>
+<li>Technical troubleshooting.</li>
+<li>Bug reproduction.</li>
+<li>Evidence gathering.</li>
+<li>Technical documentation.</li>
+<li>Cross-functional collaboration.</li>
+</ul>
+</section>
+
+<section>
+<div class="callout">
+<h3>Technical Reflection</h3>
+<p>Following an end-to-end workflow rather than investigating isolated components made it easier to identify where the delivery process failed.</p>
+</div>
+</section>
+
+<section>
+<div class="callout">
+<strong>Why this investigation matters</strong>
+<p>This investigation demonstrates my ability to analyse complex customer workflows, gather actionable technical evidence and support efficient production issue resolution.</p>
+</div>
+</section>
+
+<p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
+
+</div>
+
+<hr>
+
+<footer>
+<p>&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
+</p>
+</footer>
+
+</body>
+</html>
