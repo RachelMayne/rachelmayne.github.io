@@ -54,4 +54,122 @@ This investigation documents the process followed to reproduce and analyse an in
 <li><strong>Issue Type:</strong> Booking Workflow Edge Case</li>
 <li><strong>Severity:</strong> High</li>
 <li><strong>Customer Impact:</strong> Valid appointments could not be booked online.</li>
-<li><
+<li><strong>Outcome:</strong> Investigation enabled Engineering to reproduce the defect and deploy a production fix.</li>
+</ul>
+
+<h3>Background</h3>
+
+<p>
+A customer reported that appointments could not always be booked online despite availability appearing to exist. The behaviour was inconsistent and could not initially be reproduced, suggesting the issue was caused by a specific combination of booking rules rather than a general platform failure.
+</p>
+
+<p>
+As Online Booking is a customer-facing feature, understanding the cause of the issue was important to minimise disruption and restore confidence in the booking process.
+</p>
+
+<h3>Objective</h3>
+
+<p>
+Determine why valid appointments were being rejected by the Online Booking system, establish reliable reproduction steps and provide Engineering with clear technical evidence for investigation.
+</p>
+
+<h3>Investigation</h3>
+
+<p>
+The investigation focused on recreating the customer's environment while systematically eliminating possible causes.
+</p>
+
+<ul>
+
+<li>Recreated the customer's Online Booking configuration.</li>
+
+<li>Tested multiple appointment types, practitioners and booking dates.</li>
+
+<li>Compared successful and unsuccessful booking attempts.</li>
+
+<li>Repeated testing using different availability scenarios.</li>
+
+<li>Reviewed the interaction between booking restrictions and appointment availability.</li>
+
+<li>Documented every test performed to establish reliable reproduction steps.</li>
+
+</ul>
+
+<h3>Evidence Collected</h3>
+
+<p>
+Testing identified a repeatable edge case where the configured 24-hour booking restriction interacted unexpectedly with appointment availability. Under specific conditions the booking engine rejected appointments that should have been available to patients.
+</p>
+
+<p>
+The investigation included documentation of:
+</p>
+
+<ul>
+
+<li>Step-by-step reproduction instructions.</li>
+
+<li>Expected versus actual behaviour.</li>
+
+<li>Screenshots demonstrating the issue.</li>
+
+<li>Configuration details affecting reproduction.</li>
+
+<li>Assessment of customer impact.</li>
+
+</ul>
+
+<h3>Outcome</h3>
+
+<p>
+Providing a structured investigation enabled Engineering to reproduce the issue quickly, prioritise the defect and implement an out-of-hours production fix, restoring normal booking functionality.
+</p>
+
+<p>
+Although I was not responsible for implementing the software fix, providing clear technical evidence reduced investigation time and enabled efficient collaboration between Support, Product and Engineering teams.
+</p>
+
+<h3>Skills Demonstrated</h3>
+
+<ul>
+
+<li>Technical troubleshooting within a live SaaS platform.</li>
+
+<li>Structured bug reproduction.</li>
+
+<li>Root cause investigation.</li>
+
+<li>Customer issue ownership.</li>
+
+<li>Technical documentation for Engineering teams.</li>
+
+<li>Cross-functional collaboration with Product and Engineering.</li>
+
+</ul>
+
+<h3>Key Learning</h3>
+
+<p>
+Complex customer issues are not always caused by obvious software failures. Careful reproduction, structured testing and clear documentation are often the fastest way to identify edge cases and provide Engineering with the evidence required to resolve production issues efficiently.
+</p>
+
+<p>
+<a href="portfolio.html">← Back to Technical Investigations</a>
+</p>
+
+<hr>
+
+<footer>
+
+<p>
+© 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</p>
+
+</footer>
+
+</body>
+
+</html>
