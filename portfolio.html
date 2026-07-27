@@ -34,13 +34,13 @@
 <h2>Technical Portfolio</h2>
 
 <p>
-This portfolio showcases production investigations carried out within live SaaS environments. Each case study demonstrates my structured approach to reproducing customer-reported issues, identifying root causes, gathering technical evidence and collaborating with Engineering and Product to resolve complex problems.
+This portfolio showcases production investigations carried out within live SaaS environments. Each case study demonstrates my structured approach to reproducing customer-reported issues, identifying root causes, gathering technical evidence and collaborating with Engineering and Product to resolve complex production problems.
 </p>
 
 <div class="stats-bar">
-<span>12+ Production Investigations</span>
+<span>15+ Production Investigations</span>
 <span>Root Cause Analysis</span>
-<span>Stripe, Xero, APIs, Raygun </span>
+<span>Stripe, APIs, Raygun &amp; AI</span>
 <span>Support &amp; Engineering Collaboration</span>
 </div>
 
@@ -50,15 +50,28 @@ This portfolio showcases production investigations carried out within live SaaS 
 
 <div class="featured-grid">
 
+<a href="stripe-webhook.html" class="portfolio-link">
+<div class="featured-card">
+<h3><span class="status-dot"></span>Stripe Webhook Payment Failure</h3>
+<p>Diagnosed a production webhook failure where successful Stripe payments did not complete downstream booking creation, enabling Engineering to deploy a production hotfix.</p>
+<div class="tech-stack">
+<span class="tech-tag">Stripe</span>
+<span class="tech-tag">Webhooks</span>
+<span class="tech-tag">Production Incident</span>
+<span class="tech-tag">Root Cause</span>
+</div>
+</div>
+</a>
+
 <a href="data-hygiene.html" class="portfolio-link">
 <div class="featured-card">
 <h3><span class="status-dot"></span>Data Hygiene Investigation</h3>
 <p>Comparative testing identified that attachment uploads were not updating the value used by the Data Hygiene Tool, preventing recent activity from being recognised correctly.</p>
 <div class="tech-stack">
 <span class="tech-tag">Root Cause</span>
-<span class="tech-tag">Data Retention</span>
-<span class="tech-tag">Jira</span>
 <span class="tech-tag">Comparative Testing</span>
+<span class="tech-tag">Jira</span>
+<span class="tech-tag">Evidence</span>
 </div>
 </div>
 </a>
@@ -66,38 +79,51 @@ This portfolio showcases production investigations carried out within live SaaS 
 <a href="availability-refresh.html" class="portfolio-link">
 <div class="featured-card">
 <h3><span class="status-dot"></span>Online Booking Availability Refresh</h3>
-<p>Investigated refresh timing and state synchronisation to identify why updated appointment availability was not immediately visible to patients.</p>
+<p>Investigated application state synchronisation to determine why updated appointment availability was not immediately visible to patients.</p>
 <div class="tech-stack">
-<span class="tech-tag">Online Booking</span>
-<span class="tech-tag">Browser Tools</span>
 <span class="tech-tag">State Analysis</span>
+<span class="tech-tag">Browser Tools</span>
 <span class="tech-tag">Production</span>
-</div>
-</div>
-</a>
-
-<a href="integrated-payments.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>Integrated Payments</h3>
-<p>Analysed payment processing workflows and gathered structured evidence that enabled Engineering to reproduce and resolve transaction issues.</p>
-<div class="tech-stack">
-<span class="tech-tag">Stripe</span>
-<span class="tech-tag">Payments</span>
-<span class="tech-tag">APIs</span>
-<span class="tech-tag">Investigation</span>
+<span class="tech-tag">Testing</span>
 </div>
 </div>
 </a>
 
 <a href="sms-delivery.html" class="portfolio-link">
 <div class="featured-card">
-<h3><span class="status-dot"></span>SMS Delivery</h3>
+<h3><span class="status-dot"></span>SMS Delivery Investigation</h3>
 <p>Isolated an intermittent messaging issue through structured testing, proving the failure originated with an external telecommunications provider.</p>
 <div class="tech-stack">
 <span class="tech-tag">Bandwidth</span>
 <span class="tech-tag">Third-Party</span>
 <span class="tech-tag">Evidence</span>
 <span class="tech-tag">Testing</span>
+</div>
+</div>
+</a>
+
+<a href="integrated-payments.html" class="portfolio-link">
+<div class="featured-card">
+<h3><span class="status-dot"></span>Stripe Invoice Synchronisation</h3>
+<p>Compared successful and failed payment synchronisation events to identify an intermittent Stripe invoice update issue and support Engineering triage.</p>
+<div class="tech-stack">
+<span class="tech-tag">Stripe</span>
+<span class="tech-tag">Payments</span>
+<span class="tech-tag">API</span>
+<span class="tech-tag">Investigation</span>
+</div>
+</div>
+</a>
+
+<a href="ai-governance.html" class="portfolio-link">
+<div class="featured-card">
+<h3><span class="status-dot"></span>AI Governance &amp; DPIA Leadership</h3>
+<p>Produced validated customer guidance covering AI governance, DPIA considerations and implementation, contributing towards future knowledge-base content.</p>
+<div class="tech-stack">
+<span class="tech-tag">AI Governance</span>
+<span class="tech-tag">Technical Writing</span>
+<span class="tech-tag">Compliance</span>
+<span class="tech-tag">Knowledge</span>
 </div>
 </div>
 </a>
@@ -112,7 +138,7 @@ This portfolio showcases production investigations carried out within live SaaS 
 
 <div class="case-study-links">
 
-<a href="xero-export.html" class="case-button">Xero Bulk Export</a>
+<a href="online-booking.html" class="case-button">Online Booking Edge Case</a>
 <a href="magic-link.html" class="case-button">Mobile Magic Link</a>
 <a href="portal-edit.html" class="case-button">Appointment Portal Edit</a>
 <a href="calendar-sync.html" class="case-button">Calendar Synchronisation</a>
@@ -120,6 +146,7 @@ This portfolio showcases production investigations carried out within live SaaS 
 <a href="soap-scribe.html" class="case-button">SOAP Scribe</a>
 <a href="filename-truncation.html" class="case-button">Filename Truncation</a>
 <a href="iframe-printing.html" class="case-button">Assessment Printing</a>
+<a href="raygun-monitoring.html" class="case-button">Raygun Monitoring</a>
 
 </div>
 
@@ -131,16 +158,19 @@ This portfolio showcases production investigations carried out within live SaaS 
 
 <div class="tech-stack">
 <span class="tech-tag">REST APIs</span>
+<span class="tech-tag">Webhooks</span>
 <span class="tech-tag">OAuth 2.0</span>
+<span class="tech-tag">Stripe</span>
+<span class="tech-tag">Raygun</span>
+<span class="tech-tag">JSON</span>
+<span class="tech-tag">Browser Developer Tools</span>
 <span class="tech-tag">Git</span>
 <span class="tech-tag">GitHub</span>
-<span class="tech-tag">JSON</span>
 <span class="tech-tag">HTML</span>
 <span class="tech-tag">CSS</span>
-<span class="tech-tag">Browser Developer Tools</span>
-<span class="tech-tag">Raygun</span>
 <span class="tech-tag">Jira</span>
 <span class="tech-tag">Technical Documentation</span>
+<span class="tech-tag">AI Governance</span>
 <span class="tech-tag">Production Support</span>
 </div>
 
@@ -151,7 +181,7 @@ This portfolio showcases production investigations carried out within live SaaS 
 <h3>Why This Portfolio</h3>
 
 <p>
-Rather than simply listing technologies, these investigations demonstrate how I approach unfamiliar problems, validate assumptions through structured testing, communicate findings clearly and help Engineering reach the root cause more quickly.
+Rather than simply listing technologies, these investigations demonstrate how I approach unfamiliar production issues, validate assumptions through structured testing, communicate technical findings clearly and help Engineering identify root causes efficiently. Together they showcase experience across API integrations, payment systems, production incidents, third-party services, application state analysis, AI governance and technical documentation.
 </p>
 
 </section>
