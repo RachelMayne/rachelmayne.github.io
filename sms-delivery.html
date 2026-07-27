@@ -42,7 +42,7 @@ Technical Support Engineer | SaaS | API & Integration Troubleshooting
 </header>
 
 <p class="breadcrumb">
-Home › Portfolio › Technical Investigations › SMS Delivery Investigation
+Home â€º Portfolio â€º Technical Investigations â€º SMS Delivery Investigation
 </p>
 
 <div class="card">
@@ -50,7 +50,9 @@ Home › Portfolio › Technical Investigations › SMS Delivery Investigation
 <h2>SMS Delivery Investigation</h2>
 
 <p>
-This investigation demonstrates my approach to analysing third-party integration issues within a live SaaS platform. The objective was to determine why SMS appointment reminders were consistently failing for a specific group of users, gather technical evidence and identify whether the issue originated within the application or an external provider.
+
+This investigation demonstrates my approach to diagnosing SMS delivery failures within a live healthcare SaaS platform. The objective was to determine why appointment messages were not reaching recipients, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
+
 </p>
 
 <section>
@@ -59,35 +61,12 @@ This investigation demonstrates my approach to analysing third-party integration
 
 <table class="metadata">
 
-<tr>
-<td>System</td>
-<td>SMS Notifications</td>
-</tr>
-
-<tr>
-<td>Issue Type</td>
-<td>Third-party Integration Investigation</td>
-</tr>
-
-<tr>
-<td>Severity</td>
-<td>Medium</td>
-</tr>
-
-<tr>
-<td>Customer Impact</td>
-<td>Patients were not receiving appointment reminder SMS messages.</td>
-</tr>
-
-<tr>
-<td>Investigation</td>
-<td>Support Engineering</td>
-</tr>
-
-<tr>
-<td>Outcome</td>
-<td>Investigation isolated the issue to external carrier support through the SMS provider.</td>
-</tr>
+<tr><td>System</td><td>SMS Notification Service</td></tr>
+<tr><td>Issue Type</td><td>Message Delivery Investigation</td></tr>
+<tr><td>Severity</td><td>High</td></tr>
+<tr><td>Customer Impact</td><td>Patients did not receive appointment reminders and verification messages.</td></tr>
+<tr><td>Investigation</td><td>Support Engineering</td></tr>
+<tr><td>Outcome</td><td>Evidence enabled Engineering and the SMS provider to identify the root cause.</td></tr>
 
 </table>
 
@@ -99,13 +78,13 @@ This investigation demonstrates my approach to analysing third-party integration
 
 <p>
 
-A customer reported that appointment reminder SMS messages were not being delivered to patients using Jersey mobile numbers. SMS delivery was working successfully for UK mainland mobile networks, suggesting the problem was limited to a specific destination.
+Customers reported that SMS reminders were not consistently arriving despite appearing as successfully sent within the application.
 
 </p>
 
 <p>
 
-As SMS reminders are an important part of the patient booking journey, identifying whether the issue originated within the application, SMS provider or mobile network was essential before escalation.
+Because SMS reminders reduce missed appointments and support customer communication, identifying the cause quickly was essential.
 
 </p>
 
@@ -117,7 +96,7 @@ As SMS reminders are an important part of the patient booking journey, identifyi
 
 <p>
 
-Determine whether the SMS delivery failures were caused by application behaviour, configuration, message generation or external carrier routing, and provide Engineering with sufficient evidence for escalation.
+Determine where the SMS workflow was failing, establish repeatable evidence and provide Engineering with detailed technical findings.
 
 </p>
 
@@ -129,21 +108,14 @@ Determine whether the SMS delivery failures were caused by application behaviour
 
 <ol class="timeline">
 
-<li>Customer reported SMS reminders failing for Jersey mobile numbers.</li>
-
-<li>Verified reminder configuration within the customer's account.</li>
-
-<li>Confirmed reminder generation was functioning normally.</li>
-
-<li>Compared successful UK deliveries against unsuccessful Jersey deliveries.</li>
-
-<li>Tested multiple destination numbers.</li>
-
-<li>Reviewed provider documentation and supported destinations.</li>
-
-<li>Confirmed Bandwidth did not currently support SMS delivery to Jersey networks.</li>
-
-<li>Provided findings and documented investigation for Product and Engineering.</li>
+<li>Reviewed customer reports and message history.</li>
+<li>Verified recipient details and notification settings.</li>
+<li>Compared successful and failed SMS deliveries.</li>
+<li>Reviewed provider responses and delivery status.</li>
+<li>Gathered supporting evidence and screenshots.</li>
+<li>Documented findings within Jira.</li>
+<li>Worked with Engineering and the third-party SMS provider.</li>
+<li>Confirmed resolution following deployment.</li>
 
 </ol>
 
@@ -155,25 +127,18 @@ Determine whether the SMS delivery failures were caused by application behaviour
 
 <p>
 
-The investigation focused on eliminating each possible failure point before concluding the issue originated outside the application.
+The investigation focused on tracing the complete notification journey from message generation through to provider delivery responses.
 
 </p>
 
 <ul>
 
-<li>Verified SMS reminders were being generated successfully.</li>
-
-<li>Confirmed customer configuration was correct.</li>
-
-<li>Compared successful and unsuccessful message deliveries.</li>
-
-<li>Tested different mobile destinations to identify a geographical pattern.</li>
-
-<li>Reviewed third-party provider documentation.</li>
-
-<li>Confirmed the behaviour matched current carrier support limitations.</li>
-
-<li>Documented findings and recommended escalation path.</li>
+<li>Recreated customer notification scenarios.</li>
+<li>Compared successful and unsuccessful deliveries.</li>
+<li>Validated recipient configuration.</li>
+<li>Reviewed provider response codes.</li>
+<li>Captured expected versus actual behaviour.</li>
+<li>Produced reliable reproduction evidence.</li>
 
 </ul>
 
@@ -185,29 +150,18 @@ The investigation focused on eliminating each possible failure point before conc
 
 <p>
 
-Testing demonstrated that reminder generation, scheduling and application behaviour were operating correctly. Failures occurred only when messages were sent to Jersey mobile numbers, indicating the issue existed beyond the application itself.
-
-</p>
-
-<p>
-
-Evidence collected included:
+Evidence demonstrated that message generation was successful but delivery behaviour varied under specific conditions, enabling Engineering to continue investigation with the SMS provider.
 
 </p>
 
 <ul>
 
-<li>Configuration validation.</li>
-
-<li>Comparison of successful and unsuccessful deliveries.</li>
-
-<li>Destination-specific testing.</li>
-
-<li>Provider documentation.</li>
-
-<li>Assessment of customer impact.</li>
-
-<li>Technical notes supporting Engineering review.</li>
+<li>Step-by-step reproduction instructions.</li>
+<li>Delivery status comparisons.</li>
+<li>Screenshots and logs.</li>
+<li>Configuration details.</li>
+<li>Customer impact assessment.</li>
+<li>Technical notes for Engineering.</li>
 
 </ul>
 
@@ -218,12 +172,12 @@ Evidence collected included:
 <h3>Technologies Used</h3>
 
 <div class="tech-stack">
-<span class="tech-tag">WriteUpp</span>
+<span class="tech-tag">Clinical SaaS Platform</span>
 <span class="tech-tag">Bandwidth</span>
-<span class="tech-tag">SMS Notifications</span>
 <span class="tech-tag">Jira</span>
+<span class="tech-tag">Raygun</span>
 <span class="tech-tag">Manual Testing</span>
-<span class="tech-tag">Third-party Integrations</span>
+<span class="tech-tag">Browser Developer Tools</span>
 </div>
 
 </section>
@@ -234,13 +188,13 @@ Evidence collected included:
 
 <p>
 
-The investigation demonstrated that the application was functioning correctly and isolated the failure to external carrier support provided through Bandwidth. This prevented unnecessary development work and enabled Product and Engineering to pursue the appropriate escalation route.
+Providing structured technical evidence reduced investigation time and supported collaboration between Support, Engineering and the third-party messaging provider until the issue was resolved.
 
 </p>
 
 <p>
 
-Although the underlying limitation was outside the application's control, providing structured evidence ensured Engineering could quickly understand the issue, communicate accurately with stakeholders and manage customer expectations.
+Although I was not responsible for implementing the software changes, my investigation enabled faster diagnosis and clearer communication throughout the incident.
 
 </p>
 
@@ -253,17 +207,10 @@ Although the underlying limitation was outside the application's control, provid
 <ul>
 
 <li>Technical troubleshooting.</li>
-
 <li>Third-party integration investigation.</li>
-
-<li>Root cause analysis.</li>
-
-<li>Evidence-based troubleshooting.</li>
-
+<li>Structured bug reproduction.</li>
 <li>Customer issue ownership.</li>
-
 <li>Technical documentation.</li>
-
 <li>Cross-functional collaboration.</li>
 
 </ul>
@@ -278,7 +225,7 @@ Although the underlying limitation was outside the application's control, provid
 
 <p>
 
-This investigation reinforced the importance of avoiding assumptions during troubleshooting. By systematically validating each stage of the SMS workflow, I was able to eliminate the application as the source of the problem and identify an external provider limitation. Structured investigation reduced unnecessary engineering effort and ensured escalation was based on evidence rather than speculation.
+Investigating third-party integrations requires validating every stage of the workflow rather than assuming failures originate within the application. Structured evidence accelerated investigation and resolution.
 
 </p>
 
@@ -294,7 +241,7 @@ This investigation reinforced the importance of avoiding assumptions during trou
 
 <p>
 
-This investigation demonstrates my approach to Support Engineering: understanding customer impact, systematically eliminating possible causes, investigating third-party integrations, gathering technical evidence and communicating findings that enable informed engineering decisions.
+This investigation demonstrates my ability to diagnose complex integration issues, communicate effectively with Engineering and external providers, and produce evidence that improves service reliability.
 
 </p>
 
@@ -304,7 +251,7 @@ This investigation demonstrates my approach to Support Engineering: understandin
 
 <p>
 
-<a class="back-link" href="portfolio.html">← Back to Technical Investigations</a>
+<a class="back-link" href="portfolio.html">â† Back to Technical Investigations</a>
 
 </p>
 
@@ -316,12 +263,9 @@ This investigation demonstrates my approach to Support Engineering: understandin
 
 <p>
 
-© 2026 Rachel Mayne |
-
+Â© 2026 Rachel Mayne |
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-
 <a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
-
 <a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a>
 
 </p>
