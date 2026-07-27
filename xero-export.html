@@ -150,30 +150,31 @@ Testing focused on reproducing the export failure while isolating variables such
 </section>
 
 <section>
+<section>
 
 <h3>Root Cause Analysis</h3>
 
 <p>
 
-The investigation confirmed that the SaaS platform was successfully generating and submitting SMS messages for delivery. Testing demonstrated that failures only occurred for Jersey mobile numbers, while standard UK mobile numbers continued to receive messages successfully.
+The investigation confirmed that the Xero integration was functioning correctly for individual invoice exports but failed consistently when larger batches were processed. Repeated testing demonstrated that the behaviour was directly related to bulk export operations rather than customer configuration or authentication.
 
 </p>
 
 <p>
 
-By comparing affected numbers, researching regional numbering plans and escalating the issue directly with Bandwidth, I established that the failure did not originate within the application. Bandwidth confirmed that it did not provide carrier coverage for Jersey mobile networks, despite Jersey sharing the <strong>+44</strong> country code with the United Kingdom.
+By comparing successful and failed export attempts, reviewing export logs and reproducing the issue across multiple datasets, I established that the integration itself remained connected successfully throughout the process. The failure occurred only after a specific volume of invoices was submitted, indicating that the issue was related to bulk processing rather than connectivity.
 
 </p>
 
 <p>
 
-Further investigation showed that another SMS provider, Twilio, handled the same numbering ranges differently. This confirmed that the issue resulted from provider-specific routing behaviour rather than application logic.
+Providing Engineering with repeatable reproduction steps, export logs, timestamps and customer examples enabled them to isolate the affected workflow more efficiently. Structured testing also ruled out common causes such as user permissions, authentication issues and incorrect Xero configuration.
 
 </p>
 
 <p>
 
-Working alongside Product, I proposed a future enhancement that would identify Jersey (and later Isle of Man) mobile prefixes and automatically route those messages through an alternative SMS provider. Although this was outside the scope of the immediate incident, the investigation supplied the technical evidence required to support future development.
+Although the software fix was implemented by Engineering, the investigation significantly reduced diagnosis time by identifying the precise conditions required to reproduce the issue consistently.
 
 </p>
 
@@ -183,7 +184,7 @@ Working alongside Product, I proposed a future enhancement that would identify J
 
 <p>
 
-SMS delivery failures were caused by missing carrier coverage within the third-party SMS provider for Jersey mobile networks. The application generated messages correctly; the failure occurred after messages left the platform during external telecommunications routing.
+Bulk invoice exports failed because a defect within the application's bulk export workflow was triggered when processing larger batches of invoices. The Xero connection remained authenticated and operational; the failure occurred within the application's export processing logic rather than the third-party accounting service.
 
 </p>
 
