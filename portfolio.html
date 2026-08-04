@@ -1,244 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Technical Portfolio | Rachel Mayne</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-
-<div class="profile">
-<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
-<div>
-<h1>Rachel Mayne</h1>
-<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
-</div>
-</div>
-
-<nav class="navbar">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="portfolio.html" class="active">Portfolio</a>
-<a href="experience.html">Experience</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<hr>
-
-</header>
-
-<div class="card">
-
-<h2>Technical Portfolio</h2>
-
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">      
+<title>Technical Portfolio | Rachel Mayne</title>  
+<link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+  
+<header>  
+  
+<div class="profile">  
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">  
+<div>  
+<h1>Rachel Mayne</h1>  
+<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>  
+</div>  
+</div>  
+  
+<nav class="navbar">  
+<a href="index.html">Home</a>  
+<a href="about.html">About</a>  
+<a href="portfolio.html" class="active">Portfolio</a>  
+<a href="experience.html">Experience</a>  
+<a href="contact.html">Contact</a>  
+</nav>  
+  
+<hr>  
+  
+</header>  
+  
+<div class="card">  
+  
+<h2>Technical Portfolio</h2>  
+  
+<p>  
+This portfolio brings together a selection of investigations I've worked on within live SaaS environments. They show how I approach production issues, reproduce customer reported behaviour, gather technical evidence and work with Product and Engineering teams to understand what's happening and move investigations forward. 
+</p>
 <p>
-This portfolio brings together a selection of investigations I've worked on within live SaaS environments. They show how I approach production issues, reproduce customer reported behaviour, gather technical evidence and work with Product and Engineering teams to understand what's happening and move investigations forward.
-</p><p>
 Most of these investigations started with a customer reporting that "something isn't working". My role was to understand the behaviour, reproduce it where possible, identify patterns and provide enough evidence for the right people to take the investigation further.
 </p>
     
-
-<div class="stats-bar">
-<span>15+ Production Investigations</span>
-<span>Root Cause Analysis</span>
-<span>Stripe, APIs, Raygun &amp; AI</span>
-<span>Support &amp; Engineering Collaboration</span>
-</div>
-
-<section>
-
-<h3>Featured Production Investigations</h3>
-
-<div class="featured-grid">
-
-<a href="stripe-webhook.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>Stripe Webhook Payment Failure</h3>
+<div class="stats-bar">  
+<span>15+ Production Investigations</span>  
+<span>Root Cause Analysis</span>  
+<span>Stripe, APIs, Raygun &amp; AI</span>  
+<span>Support &amp; Engineering Collaboration</span>  
+</div>  
+  
+<section>  
+  
+<h3>Featured Production Investigations</h3>  
+  
+<div class="featured-grid">  
+  
+<a href="stripe-webhook.html" class="portfolio-link">  
+<div class="featured-card">  
+<h3><span class="status-dot"></span>Stripe Webhook Payment Failure</h3>  
 <p>
-Investigated a webhook failure where successful Stripe payments did not complete downstream booking creation, helping Engineering identify the cause and deploy a production fix.
-</p>
-<span class="tech-tag">Stripe</span>
-<span class="tech-tag">Webhooks</span>
-<span class="tech-tag">Production Incident</span>
-<span class="tech-tag">Root Cause</span>
-</div>
-</div>
-</a>
+    Investigated a webhook failure where successful Stripe payments did not complete downstream booking creation, helping Engineering identify the cause and deploy a production fix.
+</p>  
+<div class="tech-stack">  
+<span class="tech-tag">Stripe</span>  
+<span class="tech-tag">Webhooks</span>  
+<span class="tech-tag">Production Incident</span>  
+<span class="tech-tag">Root Cause</span>  
+</div>  
+</div>  
+</a>  
+  
+<a href="data-hygiene.html" class="portfolio-link">  
+<div class="featured-card">  
+<h3><span class="status-dot"></span>Data Hygiene Investigation</h3>  
+<p>Comparative testing identified that attachment uploads were not updating the value used by the Data Hygiene Tool, preventing recent activity from being recognised correctly.</p>  
+<div class="tech-stack">  
+<span class="tech-tag">Root Cause</span>  
+<span class="tech-tag">Comparative Testing</span>  
+<span class="tech-tag">Jira</span>  
+<span class="tech-tag">Evidence</span>  
+</div>  
+</div>  
+</a>  
+  
+<a href="availability-refresh.html" class="portfolio-link">  
+<div class="featured-card">  
+<h3><span class="status-dot"></span>Online Booking Availability Refresh</h3>  
+<p>Investigated application state synchronisation to determine why updated appointment availability was not immediately visible to patients.</p>  
+<div class="tech-stack">  
+<span class="tech-tag">State Analysis</span>  
+<span class="tech-tag">Browser Tools</span>  
+<span class="tech-tag">Production</span>  
+<span class="tech-tag">Testing</span>  
+</div>  
+</div>  
+</a>  
+  
+<a href="sms-delivery.html" class="portfolio-link">  
+<div class="featured-card">  
+<h3><span class="status-dot"></span>SMS Delivery Investigation</h3>  
+<p>Isolated an intermittent messaging issue through structured testing, proving the failure originated with an external telecommunications provider.</p>  
+<div class="tech-stack">  
+<span class="tech-tag">Bandwidth</span>  
+<span class="tech-tag">Third-Party</span>  
+<span class="tech-tag">Evidence</span>  
+<span class="tech-tag">Testing</span>  
+</div>  
+</div>  
+</a>  
+  
+<a href="integrated-payments.html" class="portfolio-link">  
+<div class="featured-card">  
+<h3><span class="status-dot"></span>Stripe Invoice Synchronisation</h3>  
+<p>Compared successful and failed payment synchronisation events to identify an intermittent Stripe invoice update issue and support Engineering triage.</p>  
+<div class="tech-stack">  
+<span class="tech-tag">Stripe</span>  
+<span class="tech-tag">Payments</span>  
+<span class="tech-tag">API</span>  
+<span class="tech-tag">Investigation</span>  
+</div>  
+</div>  
+</a>  
+  
+<a href="ai-governance.html" class="portfolio-link">  
+<div class="featured-card">  
+<h3><span class="status-dot"></span>AI Governance &amp; DPIA Leadership</h3>  
+<p>Produced validated customer guidance covering AI governance, DPIA considerations and implementation, contributing towards future knowledge-base content.</p>  
+<div class="tech-stack">  
+<span class="tech-tag">AI Governance</span>  
+<span class="tech-tag">Technical Writing</span>  
+<span class="tech-tag">Compliance</span>  
+<span class="tech-tag">Knowledge</span>  
+</div>  
+</div>  
+</a>  
+  
+</div>  
+  
+</section>  
+  
+<section>  
+  
+<h3>Additional Case Studies</h3>  
+  
+<div class="case-study-links">  
+  
+<a href="online-booking.html" class="case-button">Online Booking Edge Case</a>  
+<a href="magic-link.html" class="case-button">Mobile Magic Link</a>  
+<a href="portal-edit.html" class="case-button">Appointment Portal Edit</a>  
+<a href="calendar-sync.html" class="case-button">Calendar Synchronisation</a>  
+<a href="form-emails.html" class="case-button">Form Delivery</a>  
+<a href="soap-scribe.html" class="case-button">SOAP Scribe</a>  
+<a href="filename-truncation.html" class="case-button">Filename Truncation</a>  
+<a href="iframe-printing.html" class="case-button">Assessment Printing</a>  
+  
+</div>  
+  
+</section>  
+  
+<section>  
+  
+<h3>Technical Skills</h3>  
+  
+<div class="tech-stack">  
+<span class="tech-tag">REST APIs</span>  
+<span class="tech-tag">Webhooks</span>  
+<span class="tech-tag">OAuth 2.0</span>  
+<span class="tech-tag">Stripe</span>  
+<span class="tech-tag">Raygun</span>  
+<span class="tech-tag">JSON</span>  
+<span class="tech-tag">Browser Developer Tools</span>  
+<span class="tech-tag">Git</span>  
+<span class="tech-tag">GitHub</span>  
+<span class="tech-tag">HTML</span>  
+<span class="tech-tag">CSS</span>  
+<span class="tech-tag">Jira</span>  
+<span class="tech-tag">Technical Documentation</span>  
+<span class="tech-tag">AI Governance</span>  
+<span class="tech-tag">Production Support</span>  
+</div>  
+  
+</section>  
+  
+<section>  
+  
+<h3>Why This Portfolio</h3>  
+  
+<p>  
+Rather than simply listing technologies, these investigations demonstrate how I approach unfamiliar production issues, validate assumptions through structured testing, communicate technical findings clearly and help Engineering identify root causes efficiently. Together they showcase experience across API integrations, payment systems, production incidents, third-party services, application state analysis, AI governance and technical documentation.  
+</p>  
+  
+</section>  
+  
+</div>  
+  
+<hr>  
+  
+<footer>  
+  
+<p class="footer-update">  
+Last updated: <span id="last-updated"></span>  
+</p>  
+  
+<p class="footer-links">  
+&copy; 2026 Rachel Mayne |  
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |  
+<a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |  
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>  
+</p>  
+  
+</footer>  
+  
+<script>  
+fetch("https://api.github.com/repos/RachelMayne/rachelmayne.github.io/commits?per_page=1")  
+.then(response => response.json())  
+.then(data => {  
+  
+    const date = new Date(data[0].commit.committer.date);  
+  
+    document.getElementById("last-updated").textContent =  
+        date.toLocaleDateString("en-GB", {  
+            day: "numeric",  
+            month: "long",  
+            year: "numeric"  
+        });  
+  
+})  
+.catch(() => {  
+    document.getElementById("last-updated").textContent = "Recently";  
+});  
+</script>  
+  
+</body>  
+</html>  
 
-<a href="data-hygiene.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>Data Hygiene Investigation</h3>
-<p>
-Compared multiple scenarios to identify why recent attachment activity was not being recognised correctly by the Data Hygiene Tool.
-</p>
-<span class="tech-tag">Root Cause</span>
-<span class="tech-tag">Comparative Testing</span>
-<span class="tech-tag">Jira</span>
-<span class="tech-tag">Evidence</span>
-</div>
-</div>
-</a>
-
-<a href="availability-refresh.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>Online Booking Availability Refresh</h3>
-<p>
-Investigated why updated appointment availability was not immediately visible to patients and identified behaviour consistent with an application state refresh issue.
-</p>.
-<span class="tech-tag">State Analysis</span>
-<span class="tech-tag">Browser Tools</span>
-<span class="tech-tag">Production</span>
-<span class="tech-tag">Testing</span>
-</div>
-</div>
-</a>
-
-<a href="sms-delivery.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>SMS Delivery Investigation</h3>
-<p>
-Investigated an intermittent messaging issue through structured testing, showing the problem originated with an external telecommunications provider rather than the application itself.
-</p>
-<span class="tech-tag">Bandwidth</span>
-<span class="tech-tag">Third-Party</span>
-<span class="tech-tag">Evidence</span>
-<span class="tech-tag">Testing</span>
-</div>
-</div>
-</a>
-
-<a href="integrated-payments.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>Stripe Invoice Synchronisation</h3>
-<p>
-Compared successful and failed payment synchronisation events to narrow down an intermittent Stripe integration issue and provide Engineering with supporting evidence.
-</p>
-<div class="tech-stack">
-<span class="tech-tag">Stripe</span>
-<span class="tech-tag">Payments</span>
-<span class="tech-tag">API</span>
-<span class="tech-tag">Investigation</span>
-</div>
-</div>
-</a>
-
-<a href="ai-governance.html" class="portfolio-link">
-<div class="featured-card">
-<h3><span class="status-dot"></span>AI Governance &amp; DPIA Leadership</h3>
-<p>
-Researched and produced customer guidance covering AI governance, DPIA considerations and implementation for an integrated AI medical scribe.
-</p>
-<div class="tech-stack">
-<span class="tech-tag">AI Governance</span>
-<span class="tech-tag">Technical Writing</span>
-<span class="tech-tag">Compliance</span>
-<span class="tech-tag">Knowledge</span>
-</div>
-</div>
-</a>
-
-</div>
-
-</section>
-
-<section>
-
-<h3>Additional Case Studies</h3>
-
-<div class="case-study-links">
-
-<a href="online-booking.html" class="case-button">Online Booking Edge Case</a>
-<a href="magic-link.html" class="case-button">Mobile Magic Link</a>
-<a href="portal-edit.html" class="case-button">Appointment Portal Edit</a>
-<a href="calendar-sync.html" class="case-button">Calendar Synchronisation</a>
-<a href="form-emails.html" class="case-button">Form Delivery</a>
-<a href="soap-scribe.html" class="case-button">SOAP Scribe</a>
-<a href="filename-truncation.html" class="case-button">Filename Truncation</a>
-<a href="iframe-printing.html" class="case-button">Assessment Printing</a>
-
-</div>
-
-</section>
-
-<section>
-
-<h3>Technologies I've Worked With</h3>
-
-<div class="tech-stack">
-<span class="tech-tag">REST APIs</span>
-<span class="tech-tag">Webhooks</span>
-<span class="tech-tag">OAuth 2.0</span>
-<span class="tech-tag">Stripe</span>
-<span class="tech-tag">Raygun</span>
-<span class="tech-tag">JSON</span>
-<span class="tech-tag">Browser Developer Tools</span>
-<span class="tech-tag">Git</span>
-<span class="tech-tag">GitHub</span>
-<span class="tech-tag">HTML</span>
-<span class="tech-tag">CSS</span>
-<span class="tech-tag">Jira</span>
-<span class="tech-tag">Technical Documentation</span>
-<span class="tech-tag">AI Governance</span>
-<span class="tech-tag">Production Support</span>
-</div>
-
-</section>
-
-<section>
-
-<h3>Why This Portfolio</h3>
-
-<p>
-Rather than simply listing technologies I've used, I wanted to show how I investigate problems in practice. Each case study is based on a real production issue and explains how I approached it, what I tested, what I found and how the investigation supported Product or Engineering teams.
-</p>
-
-<p>
-Together they cover APIs, payment integrations, third party services, production incidents, AI governance and customer facing SaaS applications, but more importantly they show the way I think when faced with an unfamiliar technical problem.
-</p>
-
-</section>
-
-</div>
-
-<hr>
-
-<footer>
-
-<p class="footer-update">
-Last updated: <span id="last-updated"></span>
-</p>
-
-<p class="footer-links">
-&copy; 2026 Rachel Mayne |
-<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-<a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
-<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-</p>
-
-</footer>
-
-<script>
-fetch("https://api.github.com/repos/RachelMayne/rachelmayne.github.io/commits?per_page=1")
-.then(response => response.json())
-.then(data => {
-
-    const date = new Date(data[0].commit.committer.date);
-
-    document.getElementById("last-updated").textContent =
-        date.toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        });
-
-})
-.catch(() => {
-    document.getElementById("last-updated").textContent = "Recently";
-});
-</script>
-
-</body>
-</html>
+  
