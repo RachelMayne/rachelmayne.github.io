@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Security Investigation | Rachel Mayne</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="profile">
+
+<img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+
+<div>
+
+<h1>Rachel Mayne</h1>
+
+<p class="tagline">
+Technical Support | SaaS | APIs | Learning by Doing
+</p>
+
+</div>
+
+</div>
+
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="experience.html">Experience</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<hr>
+
+</header>
+
+
+<p class="breadcrumb">
+
+<a href="index.html">Home</a>
+&gt;
+<a href="portfolio.html">Portfolio</a>
+&gt;
+Email Security Investigation
+
+</p>
+
+
+<div class="card">
+
+
+<section>
+
+<h2>Email Security Investigation</h2>
+
+<p>
+This was one of those issues that started with something that didn't look quite right and turned into a much more important investigation.
+</p>
+
+<p>
+While looking into unusual email activity, I noticed behaviour that suggested our email system could potentially be being misused. I started investigating to understand what was happening and whether there was any wider impact.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>At a Glance</h3>
+
+<div class="metadata">
+
+<div class="metadata-item">
+<strong>Area</strong>
+<span>Email infrastructure</span>
+</div>
+
+<div class="metadata-item">
+<strong>Issue</strong>
+<span>Potential email abuse</span>
+</div>
+
+<div class="metadata-item">
+<strong>Risk</strong>
+<span>Possible disruption to outgoing email</span>
+</div>
+
+<div class="metadata-item">
+<strong>Investigation</strong>
+<span>Log analysis, testing and configuration review.</span>
+</div>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>What I Found</h3>
+
+<p>
+I traced the unusual activity through the email workflow and looked at the available logs and configuration to establish whether it was a one-off event or part of a larger problem.
+</p>
+
+<p>
+The investigation showed that the behaviour had the potential to continue if it wasn't addressed.
+</p>
+
+<p>
+Rather than treating it simply as an email delivery problem, I looked at the wider implications for the service and the third-party email provider we rely on.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>Why It Mattered</h3>
+
+<p>
+The biggest concern wasn't just the suspicious activity itself. Continued abuse could have resulted in our email provider taking action against the account.
+</p>
+
+<div class="callout">
+
+<strong>Potential impact</strong>
+
+<p>
+If the issue had continued and the account had been suspended, users could have lost the ability to send emails through the platform.
+</p>
+
+</div>
+
+<p>
+That made it important to deal with the underlying problem rather than simply monitoring it and hoping it stopped.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>What I Did</h3>
+
+<ul>
+
+<li>Investigated the unusual email activity.</li>
+
+<li>Reviewed available evidence and system behaviour.</li>
+
+<li>Identified the source of the problem.</li>
+
+<li>Worked through the appropriate configuration and security changes.</li>
+
+<li>Verified that the unwanted behaviour had stopped.</li>
+
+<li>Kept the relevant people informed while the issue was being resolved.</li>
+
+</ul>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>Outcome</h3>
+
+<p>
+The issue was contained before it could develop into a larger email delivery problem.
+</p>
+
+<p>
+Afterwards, I was told that resolving it had potentially saved the company a significant amount of stress. If the behaviour had continued, there was a real possibility that our email provider could have suspended the account and affected email sending across the platform.
+</p>
+
+<p>
+It was a good reminder that sometimes the most important problems aren't necessarily the ones that arrive as obvious support tickets.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>What I Took From It</h3>
+
+<div class="callout">
+
+<p>
+The main thing I took from this was the importance of paying attention when something doesn't quite add up. A small anomaly can sometimes be a symptom of a much bigger problem.
+</p>
+
+<p>
+It also pushed me to learn more about email security and the relationship between application behaviour, infrastructure and third-party services.
+</p>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+<h3>Things Involved</h3>
+
+<div class="tech-stack">
+
+<span class="tech-tag">Email Infrastructure</span>
+<span class="tech-tag">Email Security</span>
+<span class="tech-tag">Log Analysis</span>
+<span class="tech-tag">Production Support</span>
+<span class="tech-tag">Incident Investigation</span>
+<span class="tech-tag">Third-Party Services</span>
+
+</div>
+
+</section>
+
+
+<p style="margin-top:30px;">
+
+<a class="back-link" href="portfolio.html">
+&larr; Back to Technical Investigations
+</a>
+
+</p>
+
+
+</div>
+
+
+<hr>
+
+
+<footer>
+
+<p>
+
+&copy; 2026 Rachel Mayne |
+<a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
+<a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
