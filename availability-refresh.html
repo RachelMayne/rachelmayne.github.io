@@ -1,203 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Online Booking Availability | Rachel Mayne</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Booking Availability Investigation | Rachel Mayne</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
+
 <header>
+
 <div class="profile">
+
 <img src="profile.jpg" alt="Rachel Mayne" class="profile-photo">
+
 <div>
+
 <h1>Rachel Mayne</h1>
-<p class="tagline">Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting</p>
-</div>
-</div>
 
-<nav class="navbar">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="portfolio.html" class="active">Portfolio</a>
-<a href="experience.html">Experience</a>
-<a href="contact.html">Contact</a>
-</nav>
-<hr>
-</header>
-
-<p class="breadcrumb">
-Home &gt; Portfolio &gt; Technical Investigations &gt; OBv2 Availability Refresh Investigation
+<p class="tagline">
+Technical Support | SaaS | APIs | Learning by Doing
 </p>
 
+</div>
+
+</div>
+
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="portfolio.html" class="active">Portfolio</a>
+
+<a href="experience.html">Experience</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<hr>
+
+</header>
+
+
+<div class="breadcrumb">
+
+<a href="index.html">Home</a>
+<span>&gt;</span>
+<a href="portfolio.html">Portfolio</a>
+<span>&gt;</span>
+Technical Investigations
+<span>&gt;</span>
+Online Booking Availability
+
+</div>
+
+
 <div class="card">
+
+
+<!-- INTRODUCTION -->
+
+<section>
 
 <h2>Online Booking Availability Refresh Investigation</h2>
 
 <p>
-This investigation demonstrates my approach to diagnosing an issue affecting appointment availability within the Online Booking service of a Healthcare Practice Management Platform. The objective was to determine why recently updated availability was not immediately reflected to patients, gather technical evidence and provide Engineering with sufficient information to investigate and resolve the behaviour.
-</p>
-
-<section>
-<h3>Investigation Summary</h3>
-<table class="metadata">
-<tr><td>System</td><td>Online Booking</tr>
-<tr><td>Issue Type</td><td>Availability Refresh Investigation</td></tr>
-<tr><td>Severity</td><td>High</td></tr>
-<tr><td>Customer Impact</td><td>Patients could see outdated appointment availability, leading to booking confusion.</td></tr>
-<tr><td>Investigation</td><td>Support Engineering</td></tr>
-<tr><td>Outcome</td><td>Engineering reproduced the refresh behaviour and implemented improvements.</td></tr>
-</table>
-</section>
-
-<section>
-<h3>Background</h3>
-<p>Customers reported that changes to clinician availability or appointment slots were not always visible immediately within the online booking portal, despite appearing correctly within the platform.</p>
-<p>As this affected patient self-service booking, it was important to determine whether the issue related to synchronisation, refresh timing or application behaviour.</p>
-</section>
-
-<section>
-<h3>Objective</h3>
-<p>Identify why appointment availability was not refreshing as expected, establish repeatable reproduction steps and provide Engineering with structured diagnostic evidence.</p>
-</section>
-
-<section>
-<h3>Investigation Timeline</h3>
-<ol class="timeline">
-<li>Reviewed customer reports and booking history.</li>
-<li>Created test appointment availability.</li>
-<li>Compared availability across platforms and booking portal</li>
-<li>Repeated tests after configuration changes.</li>
-<li>Captured timestamps, screenshots and browser observations.</li>
-<li>Documented findings within Jira.</li>
-<li>Worked with Engineering to reproduce the behaviour.</li>
-<li>Verified the resolution following deployment.</li>
-</ol>
-</section>
-
-<section>
-<h3>Investigation</h3>
-<p>The investigation followed the complete booking workflow to determine when refreshed availability became visible and under which conditions delays occurred.</p>
-<ul>
-<li>Compared internal scheduling with portal availability.</li>
-<li>Tested different appointment types and locations.</li>
-<li>Observed refresh behaviour after schedule updates.</li>
-<li>Reviewed browser requests using Developer Tools.</li>
-<li>Produced consistent reproduction steps.</li>
-<li>Provided structured evidence for Engineering.</li>
-</ul>
-</section>
-
-<section>
-<h3>Evidence Collected</h3>
-<ul>
-<li>Step-by-step reproduction guide.</li>
-<li>Availability comparisons.</li>
-<li>Timestamps and screenshots.</li>
-<li>Browser network observations.</li>
-<li>Customer impact assessment.</li>
-<li>Technical notes for Engineering.</li>
-</ul>
-</section>
-
-  <section>
-
-<h3>Root Cause Analysis</h3>
-
-<p>
-
-The initial investigation confirmed that appointment availability updates were being saved successfully within the Healthcare Practice Management Platform, but those changes were not always reflected immediately within Online Booking. Repeated testing demonstrated that the booking service continued to present outdated availability despite the underlying schedule having been amended.
-
+This started with a fairly simple question: <strong>why wasn't a change to appointment availability showing up in Online Booking?</strong>
 </p>
 
 <p>
-
-A temporary workaround was identified during the investigation. Removing the clinician from Online Booking availability and then re-enabling them forced the booking configuration to refresh, causing the updated availability to appear correctly. This workaround restored functionality for affected customers while Engineering continued investigating the underlying defect.
-
+Customers were making changes to clinician availability within the main platform, but patients could sometimes continue seeing the old availability when trying to book online.
 </p>
 
 <p>
-
-Several months later, another customer experienced the same behaviour. By comparing the new incident with the original investigation, I recognised that the symptoms, reproduction steps and workaround were identical, allowing the two cases to be linked together. This additional evidence helped Engineering identify a consistent pattern that had not been apparent from a single occurrence.
-
+I wanted to work out where the disconnect was happening, whether it could be reproduced consistently, and what was actually causing the delay.
 </p>
 
-<p>
-
-Engineering determined that the issue only occurred when a clinician's working hours were modified by a site administrator rather than by the clinician updating their own availability. The Online Booking availability refresh process only detected changes made through the clinician's own working hours workflow, meaning administrator-initiated changes did not trigger the refresh. Saving the clinician's Online Booking availability effectively forced the refresh process, which explained why the workaround consistently resolved the issue.
-
-</p>
-
-<div class="callout">
-
-<strong>Confirmed Root Cause</strong>
-
-<p>
-
-Online Booking only refreshed appointment availability when changes were detected through the clinician's own working hours update process. When working hours were amended by a site administrator, the refresh event was not triggered, leaving outdated availability visible until the Online Booking configuration was manually saved, forcing the availability to refresh.
-
-</p>
-
-</div>
-
-  </section>
-
-<section>
-<h3>Technologies Used</h3>
-<div class="tech-stack">
-<span class="tech-tag">Healthcare Practice Management Platform</span>
-<span class="tech-tag">Online Booking</span>
-<span class="tech-tag">Browser Developer Tools</span>
-<span class="tech-tag">Jira</span>
-<span class="tech-tag">Raygun</span>
-<span class="tech-tag">Manual Testing</span>
-</div>
 </section>
 
-<section>
-<h3>Outcome</h3>
-<p>Providing detailed reproduction steps and timing evidence enabled Engineering to isolate the refresh behaviour and improve the consistency of appointment availability shown to patients.</p>
-<p>The investigation reduced repeat support cases and improved confidence in the online booking experience.</p>
-</section>
-
-<section>
-<h3>Skills Demonstrated</h3>
-<ul>
-<li>Workflow analysis.</li>
-<li>Browser-based troubleshooting.</li>
-<li>State and refresh investigation.</li>
-<li>Evidence gathering.</li>
-<li>Technical documentation.</li>
-<li>Cross-functional collaboration.</li>
-</ul>
-</section>
-
-<section>
-<div class="callout">
-<h3>Technical Reflection</h3>
-<p>Time-based issues can be difficult to isolate. Careful comparison of application state, portal behaviour and browser requests helped identify a repeatable pattern that Engineering could investigate effectively.</p>
-</div>
-</section>
-
-<section>
-<div class="callout">
-<strong>Why this investigation matters</strong>
-<p>This investigation demonstrates my ability to troubleshoot synchronisation and refresh behaviour across customer-facing SaaS applications, combining technical analysis with structured evidence to support efficient production issue resolution.</p>
-</div>
-</section>
-
-<p><a class="back-link" href="portfolio.html">&larr; Back to Technical Investigations</a></p>
-
-</div>
 
 <hr>
 
+
+<!-- QUICK SUMMARY -->
+
+<section>
+
+<h3>At a Glance</h3>
+
+<div class="metadata">
+
+<div class="metadata-item">
+
+<strong>System</strong>
+
+<span>Online Booking</span>
+
+</div>
+
+
+<div class="metadata-item">
+
+<strong>Type</strong>
+
+<span>Availability / refresh behaviour</span>
+
+</div>
+
+
+<div class="metadata-item">
+
+<strong>Impact</strong>
+
+<span>Patients could see outdated appointment availability.</span>
+
+</div>
+
+
+<div class="metadata-item">
+
+<strong>Tools</strong>
+
+<span>Browser Developer Tools, Jira, Raygun and manual testing.</span>
+
+</div>
+
+
+<div class="metadata-item">
+
+<strong>Outcome</strong>
+
+<span>Engineering identified the condition that prevented the refresh from being triggered.</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- BACKGROUND -->
+
+<section>
+
+<h3>What Was Happening?</h3>
+
+<p>
+Customers reported that changes to clinician availability or appointment slots were not always appearing immediately in the online booking portal.
+</p>
+
+<p>
+The interesting part was that the change <em>had</em> been saved successfully in the main platform. There was no obvious error. The internal schedule looked correct, but Online Booking could still be showing the previous state.
+</p>
+
+<p>
+That raised a few possibilities. Was there a synchronisation delay? Was the booking service caching the previous state? Was something failing when the schedule changed? Or was the refresh simply not being triggered?
+</p>
+
+<p>
+The next step was to try to reproduce it rather than guessing.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- INVESTIGATION -->
+
+<section>
+
+<h3>How I Investigated It</h3>
+
+<p>
+I worked through the booking workflow and compared what was happening in the main platform with what was being displayed in Online Booking.
+</p>
+
+
+<div class="investigation-steps">
+
+<div class="investigation-step">
+
+<span class="step-number">1</span>
+
+<div>
+
+<strong>Created test availability</strong>
+
+<p>
+I created and modified appointment availability so I could compare the behaviour under controlled conditions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="investigation-step">
+
+<span class="step-number">2</span>
+
+<div>
+
+<strong>Compared both sides</strong>
+
+<p>
+I checked the updated availability in the main platform and then compared it with what was being presented through Online Booking.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="investigation-step">
+
+<span class="step-number">3</span>
+
+<div>
+
+<strong>Repeated the tests</strong>
+
+<p>
+I tested different appointment types, locations and configuration changes to see whether the behaviour was consistent.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="investigation-step">
+
+<span class="step-number">4</span>
+
+<div>
+
+<strong>Looked underneath the UI</strong>
+
+<p>
+Browser Developer Tools were used to observe requests and understand what was happening when availability changed and when the booking page refreshed.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="investigation-step">
+
+<span class="step-number">5</span>
+
+<div>
+
+<strong>Documented what I found</strong>
+
+<p>
+I recorded timestamps, screenshots, reproduction steps and observations so the behaviour could be investigated by Engineering without having to start from scratch.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="investigation-step">
+
+<span class="step-number">6</span>
+
+<div>
+
+<strong>Worked with Engineering</strong>
+
+<p>
+The investigation was used to reproduce the behaviour and narrow down the conditions under which the refresh wasn't happening.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- THE INTERESTING BIT -->
+
+<section>
+
+<h3>The Interesting Bit</h3>
+
+<p>
+During testing, I found a workaround that consistently forced the availability to refresh.
+</p>
+
+<p>
+If the clinician was removed from Online Booking availability and then enabled again, the updated availability appeared correctly.
+</p>
+
+<div class="callout">
+
+<strong>The clue</strong>
+
+<p>
+The workaround didn't change the underlying working hours. It effectively forced the Online Booking configuration to be saved again — which suggested that the problem wasn't with the availability itself, but with <strong>what was triggering the refresh</strong>.
+</p>
+
+</div>
+
+<p>
+That gave us something much more useful than simply saying "availability sometimes takes a while to update." There was now a repeatable behaviour that could be tested.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- SECOND INCIDENT -->
+
+<section>
+
+<h3>Then It Happened Again</h3>
+
+<p>
+Several months later, another customer reported what initially looked like a separate issue.
+</p>
+
+<p>
+The symptoms were familiar.
+</p>
+
+<ul>
+
+<li>Availability had been changed successfully.</li>
+
+<li>The main platform showed the new schedule.</li>
+
+<li>Online Booking continued showing the old availability.</li>
+
+<li>The same workaround resolved the problem.</li>
+
+</ul>
+
+<p>
+Because the original investigation had been documented, I was able to compare the new case with the previous one rather than treating it as an entirely new problem.
+</p>
+
+<p>
+The reproduction steps and workaround matched closely enough to link the two incidents together.
+</p>
+
+<p>
+That second occurrence turned out to be important because it showed that this wasn't just an isolated timing problem.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- ROOT CAUSE -->
+
+<section>
+
+<h3>What Was Eventually Found</h3>
+
+<p>
+Engineering determined that the refresh depended on <strong>how the clinician's working hours had been changed</strong>.
+</p>
+
+<p>
+When a clinician updated their own working hours, the Online Booking refresh process detected the change correctly.
+</p>
+
+<p>
+However, when the same working hours were modified by a site administrator, the refresh event wasn't being triggered in the same way.
+</p>
+
+<p>
+The result was that the underlying schedule was correct, but Online Booking continued displaying the previous availability.
+</p>
+
+
+<div class="callout">
+
+<strong>Confirmed root cause</strong>
+
+<p>
+Administrator-initiated changes to clinician working hours were not triggering the Online Booking availability refresh. Saving the Online Booking configuration manually forced the refresh, which explained why the workaround consistently fixed the problem.
+</p>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- EVIDENCE -->
+
+<section>
+
+<h3>What I Kept Track Of</h3>
+
+<p>
+A useful part of this investigation was making sure there was enough evidence for someone else to pick up the problem without having to repeat all of the exploratory work.
+</p>
+
+<div class="portfolio-grid">
+
+<div>
+
+<h4>Reproduction Steps</h4>
+
+<p>
+A repeatable sequence showing how the behaviour could be produced.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Comparisons</h4>
+
+<p>
+Examples of what the main platform showed versus what appeared in Online Booking.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Timing</h4>
+
+<p>
+Timestamps showing when changes were made and when the updated availability became visible.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Browser Evidence</h4>
+
+<p>
+Observations from Developer Tools and the requests made during the booking workflow.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- OUTCOME -->
+
+<section>
+
+<h3>Where It Ended Up</h3>
+
+<p>
+The combination of the original investigation, the later matching incident and the repeatable workaround helped Engineering identify the specific condition that was preventing the refresh.
+</p>
+
+<p>
+The issue could then be addressed at the source rather than relying on the manual workaround.
+</p>
+
+<p>
+For me, one of the useful lessons from this investigation was how much easier a difficult production problem becomes when you can turn a vague report into a repeatable sequence of events.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- TOOLS -->
+
+<section>
+
+<h3>Things I Used</h3>
+
+<div class="tech-stack">
+
+<span class="tech-tag">Online Booking</span>
+
+<span class="tech-tag">Browser Developer Tools</span>
+
+<span class="tech-tag">Jira</span>
+
+<span class="tech-tag">Raygun</span>
+
+<span class="tech-tag">Manual Testing</span>
+
+<span class="tech-tag">Workflow Analysis</span>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- REFLECTION -->
+
+<section>
+
+<div class="callout">
+
+<h3>What I Took From It</h3>
+
+<p>
+This was a good example of why I enjoy troubleshooting. The initial report was essentially "the availability hasn't updated", but the useful answer required working through the whole chain of events and finding out exactly what was different between a successful update and an unsuccessful one.
+</p>
+
+<p>
+The other lesson was the value of keeping good investigation notes. When the same behaviour appeared months later, the original evidence made it possible to recognise the pattern quickly instead of starting again from zero.
+</p>
+
+</div>
+
+</section>
+
+
+<p style="margin-top:30px;">
+
+<a class="back-link" href="portfolio.html">
+&larr; Back to Technical Investigations
+</a>
+
+</p>
+
+
+</div>
+
+
+<hr>
+
+
 <footer>
-<p>&copy; 2026 Rachel Mayne |
+
+<p class="footer-update">
+&copy; 2026 Rachel Mayne |
 <a href="mailto:rachelmayne@proton.me">rachelmayne@proton.me</a> |
-<a href="https://github.com/RachelMayne" target="_blank">GitHub</a> |
-<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank">LinkedIn</a></p>
+<a href="https://github.com/RachelMayne" target="_blank" rel="noopener noreferrer">GitHub</a> |
+<a href="https://www.linkedin.com/in/rachelmayne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
