@@ -3,8 +3,10 @@
 
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rachel Mayne | Technical Support Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rachel Mayne | Things I've Been Learning, Investigating & Building</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,7 +23,7 @@
 <h1>Rachel Mayne</h1>
 
 <p class="tagline">
-Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting
+Technical Support | SaaS | APIs | Learning by Doing
 </p>
 
 </div>
@@ -42,106 +44,143 @@ Technical Support Engineer | SaaS | API &amp; Integration Troubleshooting
 
 </header>
 
+
 <div class="card">
 
-<h2>Technical Support Engineer specialising in SaaS Production Support</h2>
 
-<p>
-I investigate production issues within live SaaS platforms, reproduce customer reported software defects and collaborate closely with Product and Engineering teams to gather technical evidence and identify root causes, while improving platform reliability.
-</p>
-
-<p>
-This site was created to showcase some of my investigations covering payment integrations, APIs, webhooks, third-party services, AI governance and application behaviour, demonstrating how I approach structured troubleshooting in complex SaaS environments.
-</p>
-
-<p>
-
-<a href="portfolio.html" class="button">View Technical Investigations</a>
-
-<a href="experience.html" class="button-secondary">View Experience</a>
-
-</p>
-
-<hr>
+<!-- INTRODUCTION -->
 
 <section>
 
-<h3>Experience Snapshot</h3>
+<h2>Things I've Been Learning, Investigating &amp; Building</h2>
+
+<p>
+I work in technical support for a SaaS platform, where I spend a lot of my time investigating things that don't behave quite as expected.
+</p>
+
+<p>
+Outside of the day-to-day role, I've started documenting some of the interesting problems I've worked through and the things I've been teaching myself — from APIs and webhooks to SQL, AI governance and building this website.
+</p>
+
+<p>
+This isn't intended to be a traditional CV. It's more of a place to keep track of things I've worked on, things I've learned and the problems I've found interesting.
+</p>
+
+<p>
+
+<a href="portfolio.html" class="button">See What I've Been Working On</a>
+
+<a href="about.html" class="button-secondary">A Little About Me</a>
+
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- A FEW THINGS I'VE WORKED ON -->
+
+<section>
+
+<h3>A Few Things I've Worked On</h3>
 
 <div class="portfolio-grid">
 
 <div>
 
-<h4>12+</h4>
+<h4>Production Problems</h4>
 
-<p>Years supporting websites, digital products and SaaS applications.</p>
-
-</div>
-
-<div>
-
-<h4>2,600+</h4>
-
-<p>Customer conversations supported each month within a live healthcare SaaS platform, governed by strict SLAs.</p>
+<p>
+Investigating bugs, unexpected behaviour and customer-reported issues in a live SaaS environment.
+</p>
 
 </div>
 
 <div>
 
-<h4 id="case-count">Loading...</h4>
+<h4>Things I've Built</h4>
 
-<p>Production investigations documented across APIs, integrations and live incidents.</p>
+<p>
+Small projects, experiments and this website itself — usually created because I wanted to understand how something worked.
+</p>
+
+</div>
+
+<div>
+
+<h4>Things I've Learned</h4>
+
+<p>
+APIs, webhooks, SQL, Git, browser debugging, AI governance and the various rabbit holes that come with learning by doing.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
+
 <hr>
+
+
+<!-- RECENT HIGHLIGHT -->
 
 <section>
 
-<h3>What I Do</h3>
+<h3>Recent Highlight</h3>
+
+<div class="portfolio-card">
+
+<h4>🏆 Employee of the Quarter</h4>
 
 <p>
-I enjoy reproducing production defects, validating customer reported issues and producing structured technical evidence that enables Engineering teams to identify root causes efficiently.
+I was recently recognised as Employee of the Quarter for my contribution to the team and the wider business.
 </p>
 
 <p>
-My investigations regularly involve payment platforms, REST APIs, webhooks, browser debugging, production monitoring, third-party integrations and customer facing technical documentation.
+One of the things highlighted was identifying and resolving an email security issue which had the potential to cause significant disruption if it had continued.
 </p>
 
-<div class="tech-stack">
-
-<span class="tech-tag">Production Support</span>
-<span class="tech-tag">Root Cause Analysis</span>
-<span class="tech-tag">REST APIs</span>
-<span class="tech-tag">Webhooks</span>
-<span class="tech-tag">Stripe</span>
-<span class="tech-tag">Raygun</span>
-<span class="tech-tag">Technical Documentation</span>
-<span class="tech-tag">Jira</span>
+<p>
+It was a good reminder that sometimes the seemingly small things you notice while investigating a problem can have much bigger consequences.
+</p>
 
 </div>
 
 </section>
 
+
 <hr>
+
+
+<!-- TECHNICAL INVESTIGATIONS -->
 
 <section>
 
-<h3>Featured Technical Investigations</h3>
+<h3>Some Problems I've Investigated</h3>
+
+<p>
+I've started documenting a few of the more interesting investigations I've worked through. The aim isn't to make them sound impressive — it's to record what I found, how I approached the problem and what I learned from it.
+</p>
+
 
 <div class="portfolio-grid">
+
 
 <a href="stripe-webhook.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Stripe Webhook Payment Failure</h4>
+<h4>
+<span class="status-dot"></span>
+Stripe Webhook Payment Failure
+</h4>
 
 <p>
-Diagnosed a webhook failure where successful Stripe payments did not trigger a downstream appointment creation.
+A successful Stripe payment wasn't triggering the expected downstream appointment creation. I worked through the event flow to identify where things were breaking.
 </p>
 
 <div class="tech-stack">
@@ -156,20 +195,24 @@ Diagnosed a webhook failure where successful Stripe payments did not trigger a d
 
 </a>
 
+
 <a href="data-hygiene.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Data Hygiene Investigation</h4>
+<h4>
+<span class="status-dot"></span>
+Data Hygiene Investigation
+</h4>
 
 <p>
-Comparative testing identified an issue affecting data retention calculations.
+Comparative testing helped identify an issue affecting data retention calculations and narrow down the underlying behaviour.
 </p>
 
 <div class="tech-stack">
 
-<span class="tech-tag">Root Cause</span>
 <span class="tech-tag">Testing</span>
+<span class="tech-tag">Root Cause</span>
 <span class="tech-tag">Jira</span>
 
 </div>
@@ -178,14 +221,18 @@ Comparative testing identified an issue affecting data retention calculations.
 
 </a>
 
+
 <a href="availability-refresh.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Online Booking Availability Refresh</h4>
+<h4>
+<span class="status-dot"></span>
+Online Booking Availability Refresh
+</h4>
 
 <p>
-Investigated app state synchronisation to see why appointment availability changes were not immediately visible to patients.
+I investigated why appointment availability changes weren't immediately visible to patients and looked at how application state was being updated.
 </p>
 
 <div class="tech-stack">
@@ -199,20 +246,24 @@ Investigated app state synchronisation to see why appointment availability chang
 
 </a>
 
+
 <a href="sms-delivery.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>SMS Delivery Investigation</h4>
+<h4>
+<span class="status-dot"></span>
+SMS Delivery Investigation
+</h4>
 
 <p>
-Isolated an intermittent messaging issue through structured testing, showing that the issue originated with an external telecommunications provider.
+Structured testing helped isolate an intermittent messaging issue and establish that the problem originated with an external telecommunications provider.
 </p>
 
 <div class="tech-stack">
 
-<span class="tech-tag">Bandwidth</span>
 <span class="tech-tag">Third-Party APIs</span>
+<span class="tech-tag">Testing</span>
 
 </div>
 
@@ -220,15 +271,20 @@ Isolated an intermittent messaging issue through structured testing, showing tha
 
 </a>
 
+
 <a href="integrated-payments.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>Stripe Invoice Synchronisation</h4>
+<h4>
+<span class="status-dot"></span>
+Stripe Invoice Synchronisation
+</h4>
 
 <p>
-Compared successful and failed payment synchronisation events to isolate an intermittent integration issue.
+I compared successful and failed payment synchronisation events to investigate an intermittent integration issue.
 </p>
+
 <div class="tech-stack">
 
 <span class="tech-tag">Stripe</span>
@@ -241,14 +297,18 @@ Compared successful and failed payment synchronisation events to isolate an inte
 
 </a>
 
+
 <a href="ai-governance.html" class="portfolio-link">
 
 <div class="portfolio-card">
 
-<h4><span class="status-dot"></span>AI Governance &amp; DPIA Leadership</h4>
+<h4>
+<span class="status-dot"></span>
+AI Governance &amp; DPIA Leadership
+</h4>
 
 <p>
-Produced validated customer guidance covering AI governance, DPIA considerations and implementation for an integrated AI powered medical scribe.
+I researched and produced customer guidance covering AI governance, DPIA considerations and implementation for an integrated AI-powered medical scribe.
 </p>
 
 <div class="tech-stack">
@@ -263,24 +323,75 @@ Produced validated customer guidance covering AI governance, DPIA considerations
 
 </a>
 
+
 </div>
+
 
 <p style="margin-top:25px;">
 
-<a href="portfolio.html" class="button">View Full Portfolio</a>
+<a href="portfolio.html" class="button">View All Investigations</a>
 
 </p>
 
 </section>
 
+
 <hr>
+
+
+<!-- HOW I LIKE TO WORK -->
 
 <section>
 
-<h3>Current Learning</h3>
+<h3>How I Like to Work</h3>
 
 <p>
-Alongside documenting real production investigations, I am also developing practical knowledge of SQL, APIs, webhooks, Git, AI governance and modern SaaS architecture through hands on projects and independent learning.
+I tend to get curious when something doesn't make sense.
+</p>
+
+<p>
+If a customer reports something that shouldn't be happening, I like to reproduce it, look at the evidence, test different possibilities and work backwards until I can understand what's actually happening.
+</p>
+
+<p>
+Sometimes that means browser tools, API responses, logs or third-party documentation. Sometimes it means comparing a successful example with a failed one. And sometimes it means learning something completely new because the problem requires it.
+</p>
+
+<p>
+I enjoy that process — particularly when an investigation turns an unclear problem into something that can be explained clearly to someone else.
+</p>
+
+<div class="tech-stack">
+
+<span class="tech-tag">Problem Solving</span>
+<span class="tech-tag">Root Cause Analysis</span>
+<span class="tech-tag">Production Support</span>
+<span class="tech-tag">REST APIs</span>
+<span class="tech-tag">Webhooks</span>
+<span class="tech-tag">Browser Debugging</span>
+<span class="tech-tag">Technical Documentation</span>
+<span class="tech-tag">Jira</span>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- CURRENT LEARNING -->
+
+<section>
+
+<h3>What I'm Currently Learning</h3>
+
+<p>
+A lot of my learning happens because I want to understand something I've encountered in practice.
+</p>
+
+<p>
+At the moment I'm developing my practical knowledge of SQL, APIs, webhooks, Git, AI governance and modern SaaS architecture. Rather than just working through theory, I prefer building small things, experimenting and applying what I've learned to real problems.
 </p>
 
 <div class="tech-stack">
@@ -290,37 +401,124 @@ Alongside documenting real production investigations, I am also developing pract
 <span class="tech-tag">Webhooks</span>
 <span class="tech-tag">Git</span>
 <span class="tech-tag">GitHub</span>
-  <span class="tech-tag">SQL</span>
+<span class="tech-tag">SQL</span>
 <span class="tech-tag">JSON</span>
 <span class="tech-tag">HTML</span>
 <span class="tech-tag">CSS</span>
 <span class="tech-tag">Technical Documentation</span>
 <span class="tech-tag">AI Governance</span>
-<span class="tech-tag">Support Engineering</span>
+<span class="tech-tag">SaaS Architecture</span>
 
 </div>
 
 </section>
 
+
 <hr>
+
+
+<!-- OUTSIDE THE DAY JOB -->
+
+<section>
+
+<h3>Outside the Day Job</h3>
+
+<p>
+I'm naturally curious and tend to go down rabbit holes when something interests me.
+</p>
+
+<p>
+I've travelled extensively and have lived and worked abroad, and I've always enjoyed learning through experience rather than simply reading about something.
+</p>
+
+<p>
+That mindset has carried over into the technical side of my work. If I don't understand something, I generally want to find out how it works — and preferably have a go at building or testing something myself.
+</p>
+
+<p>
+This website is partly an extension of that. It's a place to experiment, document things I've learned and keep track of projects I'm working on.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- CURRENT PROJECTS / CASE STUDY COUNT -->
+
+<section>
+
+<h3>What I've Built So Far</h3>
+
+<div class="portfolio-grid">
+
+<div>
+
+<h4 id="case-count">Loading...</h4>
+
+<p>
+Technical investigations and case studies I've documented.
+</p>
+
+</div>
+
+<div>
+
+<h4>1</h4>
+
+<p>
+Personal website built and maintained from scratch while learning HTML, CSS and GitHub.
+</p>
+
+</div>
+
+<div>
+
+<h4>Growing</h4>
+
+<p>
+More projects and investigations will be added as I learn and build new things.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- CONNECT -->
 
 <section>
 
 <h3>Let's Connect</h3>
 
 <p>
+If you'd like to get in touch, have a look around or just want to talk about something I've been working on, feel free to get in touch.
+</p>
 
-<a href="contact.html" class="button">Contact Me</a>
+<p>
 
-<a href="portfolio.html" class="button-secondary">Browse Portfolio</a>
+<a href="contact.html" class="button">Get in Touch</a>
+
+<a href="portfolio.html" class="button-secondary">Browse the Portfolio</a>
 
 </p>
 
 </section>
 
+
 </div>
 
+
 <hr>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -337,40 +535,58 @@ Alongside documenting real production investigations, I am also developing pract
 
 </footer>
 
+
 <script>
+
 // ===== CONFIG =====
+
 const owner = "RachelMayne";
 const repo = "rachelmayne.github.io";
 
+
 // Files that AREN'T case studies
+
 const ignoreFiles = [
-  "index.html",
-  "about.html",
-  "contact.html",
-  "experience.html",
-  "portfolio.html",
-  "404.html"
+    "index.html",
+    "about.html",
+    "contact.html",
+    "experience.html",
+    "portfolio.html",
+    "404.html"
 ];
 
-// ===== Last Updated =====
+
+// ===== LAST UPDATED =====
+
 fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`)
-  .then(r => r.json())
-  .then(data => {
+.then(r => r.json())
+.then(data => {
 
-      const date = new Date(data[0].commit.committer.date);
+    if (!data || !data[0]) return;
 
-      document.getElementById("last-updated").innerHTML =
+    const date = new Date(
+        data[0].commit.committer.date
+    );
+
+    document.getElementById("last-updated").innerHTML =
         "Last updated: " +
-        date.toLocaleDateString("en-GB",{
-          day:"numeric",
-          month:"long",
-          year:"numeric"
+        date.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
         });
 
-  });
+})
+.catch(() => {
+
+    document.getElementById("last-updated").innerHTML =
+        "Recently updated";
+
+});
 
 
-// ===== Count Case Studies =====
+// ===== COUNT CASE STUDIES =====
+
 fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
 .then(r => r.json())
 .then(files => {
@@ -382,10 +598,19 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
 
     ).length;
 
-    document.getElementById("case-count").textContent = count + "+";
+    document.getElementById("case-count").textContent =
+        count + "+";
+
+})
+.catch(() => {
+
+    document.getElementById("case-count").textContent =
+        "Several";
 
 });
+
 </script>
+
 
 </body>
 
