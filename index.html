@@ -376,4 +376,352 @@ If a customer reports something that shouldn't be happening, I like to reproduce
 </p>
 
 <p>
-Sometimes that means browser tools, API responses, logs or
+Sometimes that means browser tools, API responses, logs or third-party documentation. Sometimes it means comparing a successful example with a failed one. And sometimes it means learning something completely new because the problem requires it.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- RECOMMENDATIONS -->
+
+<section>
+
+<h3>What People I've Worked With Have Said</h3>
+
+<p>
+A couple of recommendations from earlier in my career have stayed with me, particularly because they describe things I still enjoy doing now — learning quickly, taking ownership and figuring things out.
+</p>
+
+
+<div class="portfolio-grid">
+
+
+<div class="portfolio-card">
+
+<h4>David Ogle</h4>
+
+<p>
+<em>
+“Rachel did a fantastic job looking after our website... She was proactive and hard working and lots of fun to have on the team.”
+</em>
+</p>
+
+<p>
+<small>
+Senior colleague · 2018
+</small>
+</p>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<h4>Robert Smith</h4>
+
+<p>
+<em>
+“Rachel showed a desire to learn, intuition and digital capability that enabled her to take on massive responsibility...”
+</em>
+</p>
+
+<p>
+<small>
+Former manager · 2016
+</small>
+</p>
+
+</div>
+
+</div>
+
+
+<p style="margin-top:25px;">
+
+<a href="https://www.linkedin.com/in/rachelmayne/"
+target="_blank"
+rel="noopener noreferrer"
+class="button-secondary">
+
+Read More on LinkedIn
+
+</a>
+
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- CURRENT LEARNING -->
+
+<section>
+
+<h3>What I'm Currently Learning</h3>
+
+<p>
+A lot of my learning happens because I want to understand something I've encountered in practice.
+</p>
+
+<p>
+At the moment I'm developing my practical knowledge of SQL, APIs, webhooks, Git, AI governance and modern SaaS architecture. I prefer building small things, experimenting and applying what I've learned rather than just reading about it.
+</p>
+
+<div class="tech-stack">
+
+<span class="tech-tag">REST APIs</span>
+<span class="tech-tag">OAuth 2.0</span>
+<span class="tech-tag">Webhooks</span>
+<span class="tech-tag">Git</span>
+<span class="tech-tag">GitHub</span>
+<span class="tech-tag">SQL</span>
+<span class="tech-tag">JSON</span>
+<span class="tech-tag">HTML</span>
+<span class="tech-tag">CSS</span>
+<span class="tech-tag">AI Governance</span>
+<span class="tech-tag">SaaS Architecture</span>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- OUTSIDE THE DAY JOB -->
+
+<section>
+
+<h3>Outside the Day Job</h3>
+
+<p>
+I'm naturally curious and tend to go down rabbit holes when something interests me.
+</p>
+
+<p>
+I've travelled extensively and have lived and worked abroad, and I've always enjoyed learning through experience rather than simply reading about something.
+</p>
+
+<p>
+That mindset has carried over into the technical side of my work. If I don't understand something, I generally want to find out how it works — and preferably have a go at building or testing something myself.
+</p>
+
+</section>
+
+
+<hr>
+
+
+<!-- WHAT I'VE BUILT -->
+
+<section>
+
+<h3>What I've Built So Far</h3>
+
+<div class="portfolio-grid">
+
+<div>
+
+<h4 id="case-count">Loading...</h4>
+
+<p>
+Technical investigations and case studies I've documented.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>1</h4>
+
+<p>
+Personal website built and maintained from scratch while learning HTML, CSS and GitHub.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Growing</h4>
+
+<p>
+More projects and investigations will be added as I learn and build new things.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<hr>
+
+
+<!-- CONNECT -->
+
+<section>
+
+<h3>Let's Connect</h3>
+
+<p>
+If you'd like to get in touch, have a look around or just want to talk about something I've been working on, feel free to get in touch.
+</p>
+
+<p>
+
+<a href="contact.html" class="button">
+Get in Touch
+</a>
+
+<a href="portfolio.html" class="button-secondary">
+Browse the Portfolio
+</a>
+
+</p>
+
+</section>
+
+
+</div>
+
+
+<hr>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p class="footer-update">
+<span id="last-updated"></span>
+</p>
+
+<p class="footer-links">
+
+&copy; 2026 Rachel Mayne |
+
+<a href="mailto:rachelmayne@proton.me">
+rachelmayne@proton.me
+</a> |
+
+<a href="https://github.com/RachelMayne"
+target="_blank"
+rel="noopener noreferrer">
+GitHub
+</a> |
+
+<a href="https://www.linkedin.com/in/rachelmayne/"
+target="_blank"
+rel="noopener noreferrer">
+LinkedIn
+</a>
+
+</p>
+
+</footer>
+
+
+<script>
+
+
+// ===== CONFIG =====
+
+const owner = "RachelMayne";
+
+const repo = "rachelmayne.github.io";
+
+
+const ignoreFiles = [
+
+    "index.html",
+    "about.html",
+    "contact.html",
+    "experience.html",
+    "portfolio.html",
+    "404.html"
+
+];
+
+
+// ===== LAST UPDATED =====
+
+fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`)
+
+.then(r => r.json())
+
+.then(data => {
+
+    if (!data || !data[0]) return;
+
+    const date = new Date(
+        data[0].commit.committer.date
+    );
+
+    document.getElementById("last-updated").innerHTML =
+
+        "Last updated: " +
+
+        date.toLocaleDateString("en-GB", {
+
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+
+        });
+
+})
+
+.catch(() => {
+
+    document.getElementById("last-updated").innerHTML =
+        "Recently updated";
+
+});
+
+
+// ===== COUNT CASE STUDIES =====
+
+fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
+
+.then(r => r.json())
+
+.then(files => {
+
+    const count = files.filter(file =>
+
+        file.name.endsWith(".html") &&
+
+        !ignoreFiles.includes(file.name)
+
+    ).length;
+
+
+    document.getElementById("case-count").textContent =
+
+        count + "+";
+
+})
+
+.catch(() => {
+
+    document.getElementById("case-count").textContent =
+        "Several";
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
